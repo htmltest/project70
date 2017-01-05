@@ -827,3 +827,66 @@ h1+.campaigns-list {padding:0}
 .item-gallery-content {position:relative; white-space:nowrap; font-size:0; letter-spacing:-1px; line-height:0}
 .item-gallery-loading {position:absolute; left:0; top:0; width:100%; height:100%; background:rgba(0, 0, 0, .5) url(../images/loading.gif) no-repeat center}
 .item-gallery-load {position:absolute; left:-9999px; top:-9999px; visibility:hidden}
+
+.mortgage {background:#fff}
+.mortgage-menu {height:580px; background:#000 url(../images/mortgage-menu.jpg) no-repeat center; background-size:cover}
+.mortgage-menu h2 {text-align:center; color:#fff; font-size:40px; line-height:40px; margin:0; padding:95px 0 55px 0}
+.mortgage-menu-list {position:relative; margin:0 100px}
+.mortgage-menu-list-inner {width:100%; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap}
+.mortgage-menu-item {display:inline-block; vertical-align:top; width:33.33%}
+.mortgage-menu-item-wrap {height:390px; position:relative}
+.mortgage-menu-item.active .mortgage-menu-item-wrap:after {content:""; display:block; width:0; height:0; position:absolute; left:50%; bottom:0; margin-left:-21px; border-bottom:21px solid #fff; border-left:21px solid transparent; border-right:21px solid transparent}
+.mortgage-menu-item a {display:block; padding:10px; text-decoration:none; color:#252525}
+.mortgage-menu-item a:hover {padding:0; border:10px solid #df5022}
+.mortgage-menu-item.active a {padding:0; border:10px solid #ff6532}
+.mortgage-menu-item-inner {height:240px; background:#fff}
+.mortgage-menu-item-logo {padding:41px 0 0 0; text-align:center; height:87px}
+.mortgage-menu-item-logo img {margin:0 auto}
+.mortgage-menu-item-text {font:bold 20px/30px "Roboto Slab", serif; text-align:center; letter-spacing:0}
+.mortgage-menu-list .slick-dots {text-align:center; font-size:0; line-height:0; letter-spacing:-1px; position:absolute; left:0; right:0; bottom:66px; margin:0}
+.mortgage-menu-list .slick-dots li {margin:0 5px; padding:0; display:inline-block; vertical-align:top}
+.mortgage-menu-list .slick-dots li:before {display:none}
+.mortgage-menu-list .slick-dots li button {display:block; width:10px; height:10px; border-radius:5px; border:none; background:#fff; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; font-size:0; line-height:0; text-indent:100px}
+.mortgage-menu-list .slick-dots li.slick-active button {background:#ef3e23}
+
+.mortgage-content {margin:0 auto; max-width:980px; position:relative; display:none; min-height:200px}
+
+.mortgage-forms {position:relative}
+.mortgage-forms:before {content:""; display:block; width:1px; background:#e3e3e3; position:absolute; left:590px; top:69px; bottom:81px}
+.mortgage-forms:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+
+.mortgage-params {float:left; width:480px; padding:71px 0 79px 0}
+.mortgage-params form {margin:0; padding:0}
+.mortgage-params-title {font:bold 25px/30px "Roboto Slab", serif; color:#252525}
+
+.mortgage-param-label {font:bold 15px/20px "Roboto Slab", serif; color:#252525; padding:37px 0 0 0; position:relative}
+.mortgage-param-label span {font-weight:300; color:#b6b6b6}
+.mortgage-initial-summ {position:absolute; right:0; top:37px; color:#499e3b; font-family:Roboto, sans-serif; font-weight:normal}
+.mortgage-initial-summ strong {font-weight:bold; font-family:"Roboto Slab", serif}
+.mortgage-param-field {padding:6px 0 35px 0}
+.mortgage-param-input {display:none}
+.mortgage-param-value {border:1px solid #c2c5cb; height:58px; border-radius:3px; font-weight:300; font-size:25px; line-height:58px; padding:0 0 0 20px; margin:0 0 -3px 0; position:relative}
+.mortgage-param-value em {font-style:normal; position:absolute; right:20px; top:0}
+.mortgage-period-summ {position:absolute; right:0; top:37px; color:#ff6532}
+
+.mortgage-results {float:right; width:280px; padding:71px 0 79px 0}
+.mortgage-results-title {font:bold 25px/30px "Roboto Slab", serif; color:#252525; padding:0 0 37px 0}
+.mortgage-results-label {font:bold 15px/20px "Roboto Slab", serif; color:#252525}
+.mortgage-results-value {font-size:25px; line-height:30px; text-transform:uppercase; font-weight:300; padding:6px 0 24px 0}
+.mortgage-results-value-summ {color:#499e3b}
+
+.mortgage-results-form {margin:21px 0 0 0; position:relative}
+.mortgage-results-form-2 {margin:17px 0 0 0}
+.mortgage-results-form .detail-link {display:block; height:48px; text-transform:uppercase; font-size:15px; line-height:48px; text-align:center; border-color:#ff6532}
+.mortgage-results-form .detail-link:hover {color:#fff; border-color:#df5022; background:#df5022}
+.mortgage-results-form-2 .detail-link {color:#fff; background:#ff6532}
+.mortgage-results-form-2 .detail-link:hover {border-color:#df5022; background:#df5022}
+.mortgage-results-form form {margin:0; padding:0; display:none; background:#fff; z-index:99; position:absolute; left:-40px; top:-5px; right:-40px; padding:22px 40px 24px 40px; box-shadow:0 10px 25px rgba(73, 158, 59, .35)}
+.mortgage-results-form.open form {display:block}
+.mortgage-results-form-close {display:block; position:absolute; right:-15px; top:-15px; width:30px; height:30px; background:#ff6532 url(../images/window-close-2.png) no-repeat center; border-radius:15px}
+.mortgage-results-form-close:hover {background-color:#df5022}
+.mortgage-results-form-title {font:bold 25px/30px "Roboto Slab", serif; color:#252525; padding:0 0 13px 0}
+.mortgage-results-form .form-label {margin-top:23px}
+.mortgage-results-form .form-submit {width:100%}
+.mortgage-results-form-close-link {display:block; text-align:center; text-transform:uppercase; font:bold 12px/30px "Roboto Slab", serif; color:#ff6532; text-decoration:none}
+.mortgage-results-form-close-link:hover {color:#df5022}

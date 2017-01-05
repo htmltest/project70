@@ -794,6 +794,78 @@ var stopScrollGallery = false;
             e.preventDefault();
         });
 
+        $('.mortgage-menu-list-inner').slick({
+            infinite: false,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            arrows: false,
+            dots: true
+        });
+
+        $('body').on('click', '.mortgage-menu-item a', function(e) {
+            var curLink = $(this);
+            var curItem = curLink.parent().parent();
+            if (!curItem.hasClass('active')) {
+                $('.mortgage-menu-item.active').removeClass('active');
+                curItem.addClass('active');
+
+                $('.mortgage-content').html('<div class="loading"><div class="loading-text">Загрузка данных</div></div>').show();
+                $.ajax({
+                    type: 'POST',
+                    url:  curLink.attr('href'),
+                    dataType: 'html',
+                    cache: false
+                }).done(function(html) {
+                    $('.mortgage-content').html(html);
+
+                    $('.mortgage-results-form input.maskPhone').mask('+7 (999) 999-99-99');
+
+                    $('.mortgage-results-form form').each(function() {
+                        $(this).validate({
+                            ignore: '',
+                            submitHandler: function(form) {
+                                $(form).append('<div class="loading"><div class="loading-text">Отправка данных</div></div>');
+                                $.ajax({
+                                    type: 'POST',
+                                    url: $(form).attr('action'),
+                                    data: $(form).serialize() + '&' + $('.mortgage-params form').serialize(),
+                                    dataType: 'html',
+                                    cache: false
+                                }).done(function(html) {
+                                    $(form).find('.loading').remove();
+                                    $(form).append(html);
+                                });
+                            }
+                        });
+                    });
+                });
+            }
+            e.preventDefault();
+        });
+
+        $('body').on('click', '.mortgage-results-form .detail-link', function(e) {
+            var curBlock = $(this).parent();
+            if (curBlock.hasClass('open')) {
+                curBlock.removeClass('open');
+            } else {
+                $('.mortgage-results-form.open').removeClass('open');
+                curBlock.addClass('open');
+                curBlock.find('.message-success').remove();
+            }
+            e.preventDefault();
+        });
+
+        $(document).click(function(e) {
+            if ($(e.target).parents().filter('.mortgage-results-form').length == 0) {
+                $('.mortgage-results-form.open').removeClass('open');
+            }
+        });
+
+        $('body').on('click', '.mortgage-results-form-close, .mortgage-results-form-close-link', function(e) {
+            $('.mortgage-results-form.open').removeClass('open');
+            e.preventDefault();
+        });
+
     });
 
     function windowOpen(contentWindow) {
