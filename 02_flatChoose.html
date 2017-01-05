@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>ЖК «Времена года»</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300,700|Roboto+Slab:300,400,700|Roboto:300,400,400i,700,700i&amp;subset=cyrillic">
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/cocoen/cocoen.min.css" />
+        <link rel="stylesheet" href="js/chosen/chosen.css" />
+        <link rel="stylesheet" href="js/jscrollpane/jquery.jscrollpane.css" />
+
+        <script src="js/jquery-2.2.2.min.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/jquery.maskedinput.min.js"></script>
+        <script src="js/cocoen/cocoen.min.js"></script>
+        <script src="js/chosen/chosen.jquery.min.js"></script>
+        <script src="js/jquery.maphilight.min.js"></script>
+        <script src="js/jscrollpane/jquery.mousewheel.js"></script>
+        <script src="js/jscrollpane/jquery.jscrollpane.min.js"></script>
+        <script src="js/modernizr-video.min.js"></script>
+        <script src="js/tools.js"></script>
+
+        <meta name="viewport" content="width=1280" />
+    </head>
+
+    <body class="page-choose">
+
+        <!-- wrapper -->
+        <div class="wrapper">
+
+            <!-- side -->
+            <div class="side">
+
+                <div class="side-container">
+                    <div class="side-content">
+                        <div class="logo"><a href="#"><img src="images/logo.png" alt="" width="145" height="103" /></a></div>
+                        <div class="logo-mini"><a href="#"><img src="images/logo-mini.png" alt="" width="144" height="41" /></a></div>
+
+                        <div class="side-phone">
+                            <div class="side-phone-title">наш телефон</div>
+                            <div class="side-phone-text">+7 (495) 135-33-65</div>
+                        </div>
+                        <div class="side-phone-mini">
+                            <div class="side-phone-title">наш телефон</div>
+                            <div class="side-phone-text">+7 (495) 135-33-65</div>
+                        </div>
+
+                        <nav>
+                            <ul>
+                                <li><a href="#"><span>О жилом комплексе «Времена года»</span></a></li>
+                                <li><a href="#"><span>Расположение и&nbsp;инфраструктура</span></a></li>
+                                <li class="active"><a href="#"><span>Выбор квартиры по&nbsp;параметрам</span></a></li>
+                                <li><a href="#"><span>Акции и&nbsp;спецпредложения</span></a></li>
+                                <li><a href="#"><span>Фотогалерея</span></a></li>
+                                <li><a href="#"><span>О застройщике</span></a></li>
+                                <li><a href="#"><span>Контакты</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <a href="#" class="side-link"></a>
+
+                <a href="#" class="callback-link"></a>
+
+                <div class="callback">
+                    <h3>Обратный звонок</h3>
+                    <form action="windows/success.html" method="post" class="ajaxForm">
+                        <div class="form-label">Телефон</div>
+                        <div class="form-input"><input type="text" name="phone" value="" class="required maskPhone" placeholder="+7 ( ___ ) ___-__-__" /></div>
+
+                        <div class="form-label">Имя <strong>/ опционально</strong></div>
+                        <div class="form-input"><input type="text" name="name" value="" /></div>
+
+                        <div class="form-submit"><input type="submit" value="Отправить" /></div>
+                    </form>
+
+                    <a href="#" class="callback-close"></a>
+                </div>
+
+            </div>
+            <!-- side END -->
+
+            <!-- wrapper inner -->
+            <div class="wrapper-inner">
+
+                <!-- choose -->
+                <div class="choose">
+
+                    <!-- choose form -->
+                    <div class="choose-form">
+                        <form action="#" method="post">
+                            <div class="form-label">Количество комнат</div>
+                            <div class="form-select">
+                                <select name="room">
+                                    <option value="0">Любое</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+
+                            <div class="form-label">Очередь</div>
+                            <div class="form-select">
+                                <select name="queue">
+                                    <option value="0">Любая</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </div>
+
+                            <div class="form-label">Секция</div>
+                            <div class="form-select">
+                                <select name="section">
+                                    <option value="0">Любая</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+
+                            <div class="form-label">Этаж</div>
+                            <div class="form-select">
+                                <select name="floor">
+                                    <option value="0">Любой</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                </select>
+                            </div>
+
+                            <div class="form-label">Площадь, м&sup2;</div>
+                            <div class="form-select">
+                                <select name="size">
+                                    <option value="0">Любая</option>
+                                    <option value="1">от 35 м&sup2;</option>
+                                    <option value="2">от 65 м&sup2;</option>
+                                    <option value="3">от 85 м&sup2;</option>
+                                    <option value="4">от 100 м&sup2;</option>
+                                </select>
+                            </div>
+
+                            <div class="form-label">Цена, руб.</div>
+                            <div class="form-select">
+                                <select name="price">
+                                    <option value="0">Не важно</option>
+                                    <option value="1">от 5.250.000 &#8381;</option>
+                                    <option value="2">от 6.250.000 &#8381;</option>
+                                    <option value="3">от 7.250.000 &#8381;</option>
+                                    <option value="4">от 8.250.000 &#8381;</option>
+                                </select>
+                            </div>
+
+                            <div class="choose-form-submit"><input type="submit" value="Найти" /></div>
+
+                            <div class="choose-form-reset"><input type="reset" value="Очистить фильтр" /></div>
+                        </form>
+                    </div>
+                    <!-- choose form END -->
+
+                    <!-- choose container -->
+                    <div class="choose-container">
+
+                        <!-- choose content -->
+                        <div class="choose-content">
+
+                            <!-- choose wrap -->
+                            <div class="choose-wrap">
+
+                                <img src="images/blank.gif" width="1056" height="619" alt="" class="choose-map" usemap="#map" />
+                                <map name="map">
+                                    <area shape="poly" coords="124,271,170,271,181,268,188,268,190,276,223,291,224,364,188,370,125,336" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
+                                    <area shape="poly" coords="169,249,203,252,203,280,191,276,190,268,180,268,172,270,167,269,127,270" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
+                                    <area shape="poly" coords="229,263,258,259,329,282,279,281,270,287,270,293,253,305,251,336,229,327" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
+                                    <area shape="poly" coords="290,283,330,283,331,353,295,387,254,385,253,306,271,295,270,287,279,283,286,283" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
+                                    <area shape="poly" coords="410,341,496,369,460,376,458,405,428,393,428,384,414,381,399,384,376,374,376,344" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
+                                    <area shape="poly" coords="462,377,495,370,601,406,602,465,565,477,465,435,463,409,459,406" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
+                                    <area shape="poly" coords="371,373,399,385,414,381,426,385,427,394,463,410,466,459,430,477,331,433,333,380" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
+                                    <area shape="poly" coords="611,472,663,493,682,487,696,492,696,505,755,528,755,586,749,601,757,606,757,617,749,619,734,619,710,614,568,547,570,480" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
+                                    <area shape="poly" coords="701,443,845,493,804,504,796,570,757,552,756,528,697,505,697,493,683,487,664,492,660,491,661,451" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
+                                    <area shape="poly" coords="804,504,845,494,1024,556,1020,619,980,618,927,619,799,573" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
+                                </map>
+
+                                <div class="choose-map-section-number" style="left:125px; top:128px">
+                                    11
+                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-1">3</div>
+                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-2">2</div>
+                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-3">1</div>
+                                    <strong>Подъезд 1</strong><strong>Подъезд 2</strong>
+                                </div>
+                                <div class="choose-map-section-number" style="left:278px; top:141px">
+                                    12
+                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-1">10</div>
+                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-2">9</div>
+                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-3">8</div>
+                                    <strong>Подъезд 1</strong><strong>Подъезд 2</strong>
+                                </div>
+                                <div class="choose-map-section-number" style="left:452px; top:230px">
+                                    13
+                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-2">1</div>
+                                    <strong>Подъезд 1</strong><strong>Подъезд 2</strong>
+                                </div>
+                                <div class="choose-map-section-number choose-map-section-number-1" style="left:367px; top:320px">
+                                    14
+                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-1">1</div>
+                                    <strong>Подъезд 1</strong>
+                                </div>
+                                <div class="choose-map-section-number choose-map-section-number-1" style="left:630px; top:423px">
+                                    15
+                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-1">12</div>
+                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-2">11</div>
+                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-3">10</div>
+                                    <strong>Подъезд 1</strong>
+                                </div>
+                                <div class="choose-map-section-number" style="left:798px; top:356px">
+                                    16
+                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-1">12</div>
+                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-2">11</div>
+                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-3">10</div>
+                                    <strong>Подъезд 1</strong><strong>Подъезд 2</strong>
+                                </div>
+
+                                <div class="choose-map-rooms">
+                                    <div class="choose-map-rooms-item">
+                                        <a href="#" class="choose-map-rooms-item-1">
+                                            <div class="choose-map-rooms-count">12</div>
+                                            <div class="choose-map-rooms-text">
+                                                <div class="choose-map-rooms-title">1-комнатные</div>
+                                                <div class="choose-map-rooms-price">от 3.000.000 &#8381;</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="choose-map-rooms-item">
+                                        <a href="#" class="choose-map-rooms-item-2">
+                                            <div class="choose-map-rooms-count">26</div>
+                                            <div class="choose-map-rooms-text">
+                                                <div class="choose-map-rooms-title">2-комнатные</div>
+                                                <div class="choose-map-rooms-price">от 5.000.000 &#8381;</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="choose-map-rooms-item">
+                                        <a href="#" class="choose-map-rooms-item-3">
+                                            <div class="choose-map-rooms-count">15</div>
+                                            <div class="choose-map-rooms-text">
+                                                <div class="choose-map-rooms-title">3-комнатные</div>
+                                                <div class="choose-map-rooms-price">от 7.000.000 &#8381;</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- choose wrap END -->
+
+                        </div>
+                        <!-- choose content END -->
+
+                        <!-- choose window -->
+                        <div class="choose-window">
+                            <div class="choose-window-container">
+                            </div>
+                        </div>
+                        <!-- choose window END -->
+
+                        <!-- choose results -->
+                        <div class="choose-results">
+                            <div class="content">
+                                <h2>Результаты поиска</h2>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Комн.</th>
+                                            <th>Дом</th>
+                                            <th>Подъезд</th>
+                                            <th>Этаж</th>
+                                            <th>Пл., м&sup2;</th>
+                                            <th>Акции</th>
+                                            <th>Цена, руб.</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align:center">1</td>
+                                            <td style="text-align:center">1</td>
+                                            <td style="text-align:center">1</td>
+                                            <td style="text-align:center">12</td>
+                                            <td style="text-align:center">63,7</td>
+                                            <td class="campaign-links" style="text-align:center">
+                                                <div class="campaign-link campaign-link-discount"><span>Скидка</span></div>
+                                                <div class="campaign-link campaign-link-construction"><span>Ремонт в подарок</span></div>
+                                                <div class="campaign-link campaign-link-gift"><span>Подарок</span></div>
+                                            </td>
+                                            <td class="price" style="text-align:center"><a href="#">5 855 847</a></td>
+                                            <td style="text-align:center"><a href="windows/order-with-error.html" class="order-link">Заявка на просмотр</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:center">2</td>
+                                            <td style="text-align:center">1</td>
+                                            <td style="text-align:center">1</td>
+                                            <td style="text-align:center">11</td>
+                                            <td style="text-align:center">63,7</td>
+                                            <td class="campaign-links" style="text-align:center">
+                                                <div class="campaign-link campaign-link-discount"><span>Скидка</span></div>
+                                                <div class="campaign-link campaign-link-construction"><span>Ремонт в подарок</span></div>
+                                                <div class="campaign-link campaign-link-gift"><span>Подарок</span></div>
+                                            </td>
+                                            <td class="price" style="text-align:center"><a href="#">5 855 847</a></td>
+                                            <td style="text-align:center"><a href="windows/order-email.html" class="order-link">Заявка на просмотр</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:center">3</td>
+                                            <td style="text-align:center">3</td>
+                                            <td style="text-align:center">1</td>
+                                            <td style="text-align:center">5</td>
+                                            <td style="text-align:center">63,7</td>
+                                            <td class="campaign-links" style="text-align:center">
+                                                <div class="campaign-link campaign-link-discount"><span>Скидка</span></div>
+                                                <div class="campaign-link campaign-link-construction"><span>Ремонт в подарок</span></div>
+                                                <div class="campaign-link campaign-link-gift"><span>Подарок</span></div>
+                                            </td>
+                                            <td class="price" style="text-align:center"><a href="#">5 855 847</a></td>
+                                            <td style="text-align:center"><a href="windows/order.html" class="order-link">Заявка на просмотр</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:center">1</td>
+                                            <td style="text-align:center">3</td>
+                                            <td style="text-align:center">1</td>
+                                            <td style="text-align:center">7</td>
+                                            <td style="text-align:center">63,7</td>
+                                            <td class="campaign-links" style="text-align:center">
+                                                <div class="campaign-link campaign-link-discount"><span>Скидка</span></div>
+                                                <div class="campaign-link campaign-link-construction"><span>Ремонт в подарок</span></div>
+                                                <div class="campaign-link campaign-link-gift"><span>Подарок</span></div>
+                                            </td>
+                                            <td class="price" style="text-align:center"><a href="#">5 855 847</a></td>
+                                            <td style="text-align:center"><a href="windows/order.html" class="order-link">Заявка на просмотр</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:center">2</td>
+                                            <td style="text-align:center">4</td>
+                                            <td style="text-align:center">1</td>
+                                            <td style="text-align:center">8</td>
+                                            <td style="text-align:center">70,0</td>
+                                            <td class="campaign-links" style="text-align:center">
+                                                <div class="campaign-link campaign-link-discount"><span>Скидка</span></div>
+                                                <div class="campaign-link campaign-link-construction"><span>Ремонт в подарок</span></div>
+                                                <div class="campaign-link campaign-link-gift"><span>Подарок</span></div>
+                                            </td>
+                                            <td class="price" style="text-align:center"><a href="#">6 017 913</a></td>
+                                            <td style="text-align:center"><a href="windows/order.html" class="order-link">Заявка на просмотр</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:center">1</td>
+                                            <td style="text-align:center">3</td>
+                                            <td style="text-align:center">1</td>
+                                            <td style="text-align:center">25</td>
+                                            <td style="text-align:center">70,0</td>
+                                            <td class="campaign-links" style="text-align:center">
+                                                <div class="campaign-link campaign-link-discount"><span>Скидка</span></div>
+                                                <div class="campaign-link campaign-link-construction"><span>Ремонт в подарок</span></div>
+                                                <div class="campaign-link campaign-link-gift"><span>Подарок</span></div>
+                                            </td>
+                                            <td class="price" style="text-align:center"><a href="#">5 958 330</a></td>
+                                            <td style="text-align:center"><a href="windows/order.html" class="order-link">Заявка на просмотр</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:center">1</td>
+                                            <td style="text-align:center">2</td>
+                                            <td style="text-align:center">1</td>
+                                            <td style="text-align:center">11</td>
+                                            <td style="text-align:center">70,0</td>
+                                            <td class="campaign-links" style="text-align:center">
+                                                <div class="campaign-link campaign-link-discount"><span>Скидка</span></div>
+                                                <div class="campaign-link campaign-link-construction"><span>Ремонт в подарок</span></div>
+                                                <div class="campaign-link campaign-link-gift"><span>Подарок</span></div>
+                                            </td>
+                                            <td class="price" style="text-align:center"><a href="#">5 958 330</a></td>
+                                            <td style="text-align:center"><a href="windows/order.html" class="order-link">Заявка на просмотр</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:center">1</td>
+                                            <td style="text-align:center">2</td>
+                                            <td style="text-align:center">1</td>
+                                            <td style="text-align:center">23</td>
+                                            <td style="text-align:center">70,0</td>
+                                            <td class="campaign-links" style="text-align:center">
+                                                <div class="campaign-link campaign-link-discount"><span>Скидка</span></div>
+                                                <div class="campaign-link campaign-link-construction"><span>Ремонт в подарок</span></div>
+                                                <div class="campaign-link campaign-link-gift"><span>Подарок</span></div>
+                                            </td>
+                                            <td class="price" style="text-align:center"><a href="#">6 017 913</a></td>
+                                            <td style="text-align:center"><a href="windows/order.html" class="order-link">Заявка на просмотр</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:center">1</td>
+                                            <td style="text-align:center">2</td>
+                                            <td style="text-align:center">1</td>
+                                            <td style="text-align:center">12</td>
+                                            <td style="text-align:center">70,0</td>
+                                            <td class="campaign-links" style="text-align:center">
+                                                <div class="campaign-link campaign-link-discount"><span>Скидка</span></div>
+                                                <div class="campaign-link campaign-link-construction"><span>Ремонт в подарок</span></div>
+                                                <div class="campaign-link campaign-link-gift"><span>Подарок</span></div>
+                                            </td>
+                                            <td class="price" style="text-align:center"><a href="#">6 017 913</a></td>
+                                            <td style="text-align:center"><a href="windows/order.html" class="order-link">Заявка на просмотр</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:center">1</td>
+                                            <td style="text-align:center">1</td>
+                                            <td style="text-align:center">1</td>
+                                            <td style="text-align:center">10</td>
+                                            <td style="text-align:center">70,0</td>
+                                            <td class="campaign-links" style="text-align:center">
+                                                <div class="campaign-link campaign-link-discount"><span>Скидка</span></div>
+                                                <div class="campaign-link campaign-link-construction"><span>Ремонт в подарок</span></div>
+                                                <div class="campaign-link campaign-link-gift"><span>Подарок</span></div>
+                                            </td>
+                                            <td class="price" style="text-align:center"><a href="#">5 855 847</a></td>
+                                            <td style="text-align:center"><a href="windows/order.html" class="order-link">Заявка на просмотр</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="pager">
+                                    <a href="#" class="active">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                    <span></span>
+                                    <a href="#">12</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- choose results END -->
+
+                    </div>
+                    <!-- choose container END -->
+
+                </div>
+                <!-- choose END -->
+
+                <!-- map -->
+                <div class="map">
+                    <div id="map"></div>
+
+                    <!-- map container -->
+                    <div class="map-container">
+                        <div class="map-content">
+                            <div class="map-block">
+                                <div class="map-text">
+                                    <h4>Адрес объекта<br /> и офиса продаж</h4>
+
+                                    <p class="map-text-title">Адрес</p>
+                                    <p>Анапа, Анапское шоссе, 6</p>
+
+                                    <p class="map-text-title">Телефоны офиса продаж</p>
+                                    <p>8-800-775-19-48</p>
+
+                                    <p class="map-text-title">электронная почта</p>
+                                    <p><a href="#">info@vg-anapa.ru</a></p>
+
+                                    <p class="map-text-title">График работы</p>
+                                    <p>С 09:00 до 18:00 ежедневно</p>
+                                </div>
+
+                                <div class="map-ways">
+                                    <div class="map-way-auto"><a href="#"></a></div>
+                                    <div class="map-way-foot"><a href="#"></a></div>
+                                    <a href="#" class="map-callback">Заказать звонок</a>
+                                </div>
+
+                                <div class="map-ways-content">
+                                    <a href="#" class="map-ways-close">Свернуть</a>
+                                    <div class="map-ways-wrap">
+                                        <div class="map-ways-item-auto">
+                                            <h4>Как добраться из центра</h4>
+                                            <div class="map-ways-item-detail">
+                                                <div class="map-ways-item-detail-inner">
+                                                    <ol>
+                                                        <li>Выезд из центра по Минскому шоссе в сторону области</li>
+                                                        <li>После пересечения МКАДа, примерно через 250-300м за АЗС «Лукойл» указатель разворота. Движение по указателю.</li>
+                                                        <li>После пересечения МКАД, примерно через 250м съезд на дублер Боровского шоссе, движение прямо 1 км.</li>
+                                                        <li>Место назначения с права. В навигаторе для ориентира можно указать адрес <strong>Одинцово, ул. Маковского, д. 26</strong></li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="map-ways-item-foot">
+                                            <h4>Как добраться из центра</h4>
+                                            <div class="map-ways-item-detail">
+                                                <div class="map-ways-item-detail-inner">
+                                                    <ol>
+                                                        <li>Отправление на&nbsp;<nobr>экспресс-электричке</nobr> с&nbsp;Белорусского вокзала до&nbsp;станции Одинцово&nbsp;&mdash; 27&nbsp;мин.</li>
+                                                        <li>Проследуйте пешком от&nbsp;станции Одинцово по&nbsp;Верхнепролетарской улице до&nbsp;ЖК&nbsp;&laquo;Времена года&raquo;&nbsp;&mdash; 1,3&nbsp;км.</li>
+                                                        <li>Поздравляем Вы&nbsp;достигли цели!</li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- map container END -->
+
+                    <script src="http://api-maps.yandex.ru/2.1/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+                    <script type="text/javascript">
+                        ymaps.ready(init);
+
+                        var myMap;
+
+                        function init () {
+                            myMap = new ymaps.Map('map', {
+                                center: [56.136, 40.390],
+                                zoom: 11,
+                                controls: ['zoomControl']
+                            });
+
+                            myMap.behaviors.disable('scrollZoom');
+
+                            var myGeocoder = ymaps.geocode('Анапа, Анапское шоссе, 6');
+                            myGeocoder.then(
+                                function (res) {
+                                    var coords = res.geoObjects.get(0).geometry.getCoordinates();
+                                    myPlacemark = new ymaps.Placemark(coords, {}, {
+                                        iconLayout: 'default#image',
+                                        iconImageHref: 'images/map-icon.png',
+                                        iconImageSize: [71, 73],
+                                        iconImageOffset: [-29, -73]
+                                    });
+                                    myMap.geoObjects.add(myPlacemark);
+                                    myMap.setCenter(coords);
+                                    var position = myMap.getGlobalPixelCenter();
+                                    myMap.setGlobalPixelCenter([ position[0] - 190, position[1] ]);
+                                },
+                                function (err) {
+                                    alert('Ошибка');
+                                }
+                            );
+                        }
+
+                        var multiRoute;
+
+                        $('.map-way-auto a').click(function(e) {
+                            if ($('.map-way-auto').hasClass('active')) {
+                                $('.map-way-auto').removeClass('active');
+                                $('.map-ways-content').removeClass('open');
+                                if (multiRoute) {
+                                    myMap.geoObjects.remove(multiRoute);
+                                }
+                            } else {
+                                if (multiRoute) {
+                                    myMap.geoObjects.remove(multiRoute);
+                                }
+                                $('.map-way-foot').removeClass('active');
+                                $('.map-way-auto').addClass('active');
+                                $('.map-ways-content').addClass('open');
+                                $('.map-ways-item-auto').addClass('active');
+                                $('.map-ways-item-foot').removeClass('active');
+                                multiRoute = new ymaps.multiRouter.MultiRoute({
+                                    referencePoints: [
+                                        'Москва, Кремлёвская набережная',
+                                        'Анапа, Анапское шоссе, 6'
+                                    ],
+                                    params: {
+                                        results: 1
+                                        }
+                                    }, {
+                                        wayPointVisible: false,
+                                        viaPointVisible: false,
+                                        routeStrokeWidth: 10,
+                                        routeStrokeColor: "#629e2a",
+                                        routeActiveStrokeWidth: 10,
+                                        routeActiveStrokeColor: "#629e2a"
+                                    }
+                                );
+                                myMap.geoObjects.add(multiRoute);
+                            }
+                            e.preventDefault();
+                        });
+
+                        $('.map-way-foot a').click(function(e) {
+                            if ($('.map-way-foot').hasClass('active')) {
+                                $('.map-way-foot').removeClass('active');
+                                $('.map-ways-content').removeClass('open');
+                                if (multiRoute) {
+                                    myMap.geoObjects.remove(multiRoute);
+                                }
+                            } else {
+                                if (multiRoute) {
+                                    myMap.geoObjects.remove(multiRoute);
+                                }
+                                $('.map-way-auto').removeClass('active');
+                                $('.map-way-foot').addClass('active');
+                                $('.map-ways-content').addClass('open');
+                                $('.map-ways-item-foot').addClass('active');
+                                $('.map-ways-item-auto').removeClass('active');
+                                multiRoute = new ymaps.multiRouter.MultiRoute({
+                                    referencePoints: [
+                                        'Москва, Белорусский вокзал',
+                                        'Анапа, Анапское шоссе, 6'
+                                    ],
+                                    params: {
+                                        results: 1,
+                                        routingMode: 'masstransit'
+                                        }
+                                    }, {
+                                        wayPointVisible: false,
+                                        viaPointVisible: false,
+                                        routeStrokeWidth: 10,
+                                        routeStrokeColor: "#629e2a",
+                                        routeActiveStrokeWidth: 10,
+                                        routeActiveStrokeColor: "#629e2a"
+                                    }
+                                );
+                                myMap.geoObjects.add(multiRoute);
+                            }
+                            e.preventDefault();
+                        });
+
+                        $('.map-ways-close').click(function(e) {
+                            $('.map-way-auto').removeClass('active');
+                            $('.map-way-foot').removeClass('active');
+                            $('.map-ways-content').removeClass('open');
+                            if (multiRoute) {
+                                myMap.geoObjects.remove(multiRoute);
+                            }
+                            e.preventDefault();
+                        });
+
+                        $('.map-ways-item-detail').jScrollPane();
+
+                    </script>
+
+                </div>
+                <!-- map END -->
+
+            </div>
+            <!-- wrapper inner END -->
+        </div>
+        <!-- wrapper END -->
+
+        <footer>
+            <div class="footer-inner">
+
+                <ul class="footer-menu">
+                    <li><a href="#">О комплексе</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Проектная декларация</a></li>
+                </ul>
+
+                <div class="footer-email"><a href="#">info@vg-anapa.ru</a></div>
+
+                <div class="footer-phone">8-800-775-19-48</div>
+
+                <div class="copyrights">© 2016, ЖК «Времена года». Все права защищены.</div>
+
+                <div class="footer-social">
+                    <a href="#" class="footer-social-vk"></a>
+                    <a href="#" class="footer-social-fb"></a>
+                    <a href="#" class="footer-social-ok"></a>
+                    <a href="#" class="footer-social-gp"></a>
+                </div>
+
+            </div>
+
+        </footer>
+
+    </body>
+</html>
