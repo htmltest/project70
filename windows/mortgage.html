@@ -7,8 +7,7 @@
             <div class="mortgage-param">
                 <div class="mortgage-param-label">Стоимость квартиры</div>
                 <div class="mortgage-param-field" id="price">
-                    <div class="mortgage-param-input"><input type="text" name="price" value="5300250" /></div>
-                    <div class="mortgage-param-value"><span></span><em>&#8381;</em></div>
+                    <div class="mortgage-param-input"><input type="text" name="price" value="5300250" data-min="3000000" data-max="8000000" /><span></span><em>&#8381;</em></div>
                     <div class="mortgage-param-slider">
                         <div class="range"></div>
                     </div>
@@ -18,8 +17,7 @@
             <div class="mortgage-param">
                 <div class="mortgage-param-label">Первоначальный взнос <span>/ не менее 20%</span> <div class="mortgage-initial-summ"><strong></strong> &#8381;</div></div>
                 <div class="mortgage-param-field" id="initial">
-                    <div class="mortgage-param-input"><input type="text" name="initial" value="40" /></div>
-                    <div class="mortgage-param-value"><span></span><em>%</em></div>
+                    <div class="mortgage-param-input"><input type="text" name="initial" value="40" data-min="20" data-max="80" /><em>%</em></div>
                     <div class="mortgage-param-slider">
                         <div class="range"></div>
                     </div>
@@ -29,8 +27,7 @@
             <div class="mortgage-param">
                 <div class="mortgage-param-label">Процентная ставка</div>
                 <div class="mortgage-param-field" id="rate">
-                    <div class="mortgage-param-input"><input type="text" name="rate" value="11.4" readonly="true" /></div>
-                    <div class="mortgage-param-value"><span></span><em>%</em></div>
+                    <div class="mortgage-param-input"><input type="text" name="rate" value="11.4" data-min="9" data-max="13" /><em>%</em></div>
                     <div class="mortgage-param-slider">
                         <div class="range"></div>
                     </div>
@@ -40,8 +37,7 @@
             <div class="mortgage-param">
                 <div class="mortgage-param-label">Срок ипотеки <span>/ не менее 12 месяцев</span> <div class="mortgage-period-summ"></div></div>
                 <div class="mortgage-param-field" id="period">
-                    <div class="mortgage-param-input"><input type="text" name="period" value="90" readonly="true" /></div>
-                    <div class="mortgage-param-value"><span></span><em>месяцев</em></div>
+                    <div class="mortgage-param-input"><input type="text" name="period" value="90" data-min="12" data-max="360" /><em>месяцев</em></div>
                     <div class="mortgage-param-slider">
                         <div class="range"></div>
                     </div>
@@ -49,6 +45,51 @@
             </div>
 
             <script>
+                $('#price .mortgage-param-input input, #initial .mortgage-param-input input, #period .mortgage-param-input input').each(function() {
+                    $(this).keypress(function(evt) {
+                        var charCode = (evt.which) ? evt.which : evt.keyCode
+                        if (charCode == 46 || charCode == 37 || charCode == 39) {
+                            return true;
+                        }
+                        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                            return false;
+                        }
+                        return true;
+                    });
+                });
+                $('#rate .mortgage-param-input input').each(function() {
+                    $(this).keypress(function(evt) {
+                        var charCode = (evt.which) ? evt.which : evt.keyCode
+                        if (charCode == 46 || charCode == 37 || charCode == 39) {
+                            return true;
+                        }
+                        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                            return false;
+                        }
+                        return true;
+                    });
+                });
+
+                $('.mortgage-param-input input').each(function() {
+                    $(this).change(function() {
+                        var curInput = $(this);
+                        var curValue = curInput.val();
+                        curValue = curValue.split('.', 2).join('.');
+                        curValue = Number(curValue);
+                        if (curInput.parents().filter('#rate').length == 1) {
+                            curValue = curValue.toFixed(1);
+                        }
+                        if (curValue < Number(curInput.data('min'))) {
+                            curValue = Number(curInput.data('min'));
+                        }
+                        if (curValue > Number(curInput.data('max'))) {
+                            curValue = Number(curInput.data('max'));
+                        }
+                        curInput.val(curValue);
+                        curInput.parent().parent().find('.range')[0].noUiSlider.set(curValue);
+                    });
+                });
+
                 $('#price').each(function() {
                     var curSlider = $(this);
                     var curRange = curSlider.find('.range')[0];
@@ -56,8 +97,8 @@
                         start: [Number(curSlider.find('.mortgage-param-input input').val())],
                         connect: [true, false],
                         range: {
-                            'min': 3000000,
-                            'max': 8000000
+                            'min': Number(curSlider.find('.mortgage-param-input input').data('min')),
+                            'max': Number(curSlider.find('.mortgage-param-input input').data('max'))
                         },
                         format: wNumb({
                             decimals: 0
@@ -77,11 +118,23 @@
                     });
                     curRange.noUiSlider.on('update', function(values, handle) {
                         curSlider.find('.mortgage-param-input input').val(values[handle]);
-                        curSlider.find('.mortgage-param-value span').html(String(values[handle]).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+                        curSlider.find('.mortgage-param-input span').html(String(values[handle]).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
                         var curSumm = Math.round($('#initial').find('.mortgage-param-input input').val() / 100 * values[handle]);
                         $('.mortgage-initial-summ strong').html(String(curSumm).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
                         recalcMortgage();
                     });
+                });
+
+                $('.mortgage-param-input span').click(function() {
+                    $(this).parent().find('input').focus();
+                });
+
+                $('.mortgage-param-input input').focus(function() {
+                    $(this).parent().find('span').css({'display': 'none'});
+                });
+
+                $('.mortgage-param-input input').blur(function() {
+                    $(this).parent().find('span').css({'display': 'block'});
                 });
 
                 $('#initial').each(function() {
@@ -92,8 +145,8 @@
                         step: 1,
                         connect: [true, false],
                         range: {
-                            'min': 20,
-                            'max': 80
+                            'min': Number(curSlider.find('.mortgage-param-input input').data('min')),
+                            'max': Number(curSlider.find('.mortgage-param-input input').data('max'))
                         },
                         format: wNumb({
                             decimals: 0
@@ -109,7 +162,6 @@
                     });
                     curRange.noUiSlider.on('update', function(values, handle) {
                         curSlider.find('.mortgage-param-input input').val(values[handle]);
-                        curSlider.find('.mortgage-param-value span').html(values[handle]);
                         var curSumm = Math.round(values[handle] / 100 * $('#price').find('.mortgage-param-input input').val());
                         $('.mortgage-initial-summ strong').html(String(curSumm).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
                         recalcMortgage();
@@ -124,8 +176,8 @@
                         step: 0.1,
                         connect: [true, false],
                         range: {
-                            'min': 9,
-                            'max': 13
+                            'min': Number(curSlider.find('.mortgage-param-input input').data('min')),
+                            'max': Number(curSlider.find('.mortgage-param-input input').data('max'))
                         },
                         format: wNumb({
                             decimals: 1
@@ -141,7 +193,6 @@
                     });
                     curRange.noUiSlider.on('update', function(values, handle) {
                         curSlider.find('.mortgage-param-input input').val(values[handle]);
-                        curSlider.find('.mortgage-param-value span').html(values[handle]);
                         recalcMortgage();
                     });
                 });
@@ -154,8 +205,8 @@
                         step: 1,
                         connect: [true, false],
                         range: {
-                            'min': 12,
-                            'max': 360
+                            'min': Number(curSlider.find('.mortgage-param-input input').data('min')),
+                            'max': Number(curSlider.find('.mortgage-param-input input').data('max'))
                         },
                         format: wNumb({
                             decimals: 0
@@ -170,7 +221,6 @@
                     });
                     curRange.noUiSlider.on('update', function(values, handle) {
                         curSlider.find('.mortgage-param-input input').val(values[handle]);
-                        curSlider.find('.mortgage-param-value span').html(values[handle]);
 
                         function num_ending(number) {
                             var endings = Array('лет', 'год', 'года');

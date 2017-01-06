@@ -839,6 +839,10 @@ var stopScrollGallery = false;
                         });
                     });
                 });
+            } else {
+                curItem.removeClass('active');
+
+                $('.mortgage-content').html('').hide();
             }
             e.preventDefault();
         });
