@@ -106,12 +106,13 @@
                                 </select>
                             </div>
 
-                            <div class="form-label">Очередь</div>
+                            <div class="form-label">Срок сдачи</div>
                             <div class="form-select">
                                 <select name="queue">
-                                    <option value="0">Любая</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
+                                    <option value="0">Любой</option>
+                                    <option value="1">4 кв. 2016 г.</option>
+                                    <option value="2">1 кв. 2018 г.</option>
+                                    <option value="3">3 кв. 2018 г.</option>
                                 </select>
                             </div>
 
@@ -192,95 +193,97 @@
 
                         <!-- choose content -->
                         <div class="choose-content">
+                            <div class="choose-content-inner">
 
-                            <!-- choose wrap -->
-                            <div class="choose-wrap">
+                                <!-- choose wrap -->
+                                <div class="choose-wrap">
 
-                                <img src="images/blank.gif" width="1056" height="619" alt="" class="choose-map" usemap="#map" />
-                                <map name="map">
-                                    <area shape="poly" coords="124,271,170,271,181,268,188,268,190,276,223,291,224,364,188,370,125,336" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
-                                    <area shape="poly" coords="169,249,203,252,203,280,191,276,190,268,180,268,172,270,167,269,127,270" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
-                                    <area shape="poly" coords="229,263,258,259,329,282,279,281,270,287,270,293,253,305,251,336,229,327" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
-                                    <area shape="poly" coords="290,283,330,283,331,353,295,387,254,385,253,306,271,295,270,287,279,283,286,283" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
-                                    <area shape="poly" coords="410,341,496,369,460,376,458,405,428,393,428,384,414,381,399,384,376,374,376,344" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
-                                    <area shape="poly" coords="462,377,495,370,601,406,602,465,565,477,465,435,463,409,459,406" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
-                                    <area shape="poly" coords="371,373,399,385,414,381,426,385,427,394,463,410,466,459,430,477,331,433,333,380" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
-                                    <area shape="poly" coords="611,472,663,493,682,487,696,492,696,505,755,528,755,586,749,601,757,606,757,617,749,619,734,619,710,614,568,547,570,480" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
-                                    <area shape="poly" coords="701,443,845,493,804,504,796,570,757,552,756,528,697,505,697,493,683,487,664,492,660,491,661,451" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
-                                    <area shape="poly" coords="804,504,845,494,1024,556,1020,619,980,618,927,619,799,573" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
-                                </map>
+                                    <img src="images/blank.gif" width="1056" height="619" alt="" class="choose-map" usemap="#map" />
+                                    <map name="map">
+                                        <area shape="poly" coords="124,271,170,271,181,268,188,268,190,276,223,291,224,364,188,370,125,336" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
+                                        <area shape="poly" coords="169,249,203,252,203,280,191,276,190,268,180,268,172,270,167,269,127,270" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
+                                        <area shape="poly" coords="229,263,258,259,329,282,279,281,270,287,270,293,253,305,251,336,229,327" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
+                                        <area shape="poly" coords="290,283,330,283,331,353,295,387,254,385,253,306,271,295,270,287,279,283,286,283" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
+                                        <area shape="poly" coords="410,341,496,369,460,376,458,405,428,393,428,384,414,381,399,384,376,374,376,344" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
+                                        <area shape="poly" coords="462,377,495,370,601,406,602,465,565,477,465,435,463,409,459,406" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
+                                        <area shape="poly" coords="371,373,399,385,414,381,426,385,427,394,463,410,466,459,430,477,331,433,333,380" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
+                                        <area shape="poly" coords="611,472,663,493,682,487,696,492,696,505,755,528,755,586,749,601,757,606,757,617,749,619,734,619,710,614,568,547,570,480" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
+                                        <area shape="poly" coords="701,443,845,493,804,504,796,570,757,552,756,528,697,505,697,493,683,487,664,492,660,491,661,451" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
+                                        <area shape="poly" coords="804,504,845,494,1024,556,1020,619,980,618,927,619,799,573" href="windows/flatchoose.html" alt="" data-maphilight='{"stroke":2, "strokeColor":"f53d20", "fillColor":"f53d20", "fillOpacity":0.25}' />
+                                    </map>
 
-                                <div class="choose-map-section-number" style="left:125px; top:128px">
-                                    11
-                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-1">3</div>
-                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-2">2</div>
-                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-3">1</div>
-                                    <strong>Подъезд 1</strong><strong>Подъезд 2</strong>
-                                </div>
-                                <div class="choose-map-section-number" style="left:278px; top:141px">
-                                    12
-                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-1">10</div>
-                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-2">9</div>
-                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-3">8</div>
-                                    <strong>Подъезд 1</strong><strong>Подъезд 2</strong>
-                                </div>
-                                <div class="choose-map-section-number" style="left:452px; top:230px">
-                                    13
-                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-2">1</div>
-                                    <strong>Подъезд 1</strong><strong>Подъезд 2</strong>
-                                </div>
-                                <div class="choose-map-section-number choose-map-section-number-1" style="left:367px; top:320px">
-                                    14
-                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-1">1</div>
-                                    <strong>Подъезд 1</strong>
-                                </div>
-                                <div class="choose-map-section-number choose-map-section-number-1" style="left:630px; top:423px">
-                                    15
-                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-1">12</div>
-                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-2">11</div>
-                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-3">10</div>
-                                    <strong>Подъезд 1</strong>
-                                </div>
-                                <div class="choose-map-section-number" style="left:798px; top:356px">
-                                    16
-                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-1">12</div>
-                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-2">11</div>
-                                    <div class="choose-map-section-number-flats choose-map-section-number-flats-3">10</div>
-                                    <strong>Подъезд 1</strong><strong>Подъезд 2</strong>
-                                </div>
-
-                                <div class="choose-map-rooms">
-                                    <div class="choose-map-rooms-item">
-                                        <a href="#" class="choose-map-rooms-item-1">
-                                            <div class="choose-map-rooms-count">12</div>
-                                            <div class="choose-map-rooms-text">
-                                                <div class="choose-map-rooms-title">1-комнатные</div>
-                                                <div class="choose-map-rooms-price">от 3.000.000 &#8381;</div>
-                                            </div>
-                                        </a>
+                                    <div class="choose-map-section-number" style="left:125px; top:128px">
+                                        11
+                                        <div class="choose-map-section-number-flats choose-map-section-number-flats-1">3</div>
+                                        <div class="choose-map-section-number-flats choose-map-section-number-flats-2">2</div>
+                                        <div class="choose-map-section-number-flats choose-map-section-number-flats-3">1</div>
+                                        <strong>Подъезд 1</strong><strong>Подъезд 2</strong>
                                     </div>
-                                    <div class="choose-map-rooms-item">
-                                        <a href="#" class="choose-map-rooms-item-2">
-                                            <div class="choose-map-rooms-count">26</div>
-                                            <div class="choose-map-rooms-text">
-                                                <div class="choose-map-rooms-title">2-комнатные</div>
-                                                <div class="choose-map-rooms-price">от 5.000.000 &#8381;</div>
-                                            </div>
-                                        </a>
+                                    <div class="choose-map-section-number" style="left:278px; top:141px">
+                                        12
+                                        <div class="choose-map-section-number-flats choose-map-section-number-flats-1">10</div>
+                                        <div class="choose-map-section-number-flats choose-map-section-number-flats-2">9</div>
+                                        <div class="choose-map-section-number-flats choose-map-section-number-flats-3">8</div>
+                                        <strong>Подъезд 1</strong><strong>Подъезд 2</strong>
                                     </div>
-                                    <div class="choose-map-rooms-item">
-                                        <a href="#" class="choose-map-rooms-item-3">
-                                            <div class="choose-map-rooms-count">15</div>
-                                            <div class="choose-map-rooms-text">
-                                                <div class="choose-map-rooms-title">3-комнатные</div>
-                                                <div class="choose-map-rooms-price">от 7.000.000 &#8381;</div>
-                                            </div>
-                                        </a>
+                                    <div class="choose-map-section-number" style="left:452px; top:230px">
+                                        13
+                                        <div class="choose-map-section-number-flats choose-map-section-number-flats-2">1</div>
+                                        <strong>Подъезд 1</strong><strong>Подъезд 2</strong>
+                                    </div>
+                                    <div class="choose-map-section-number choose-map-section-number-1" style="left:367px; top:320px">
+                                        14
+                                        <div class="choose-map-section-number-flats choose-map-section-number-flats-1">1</div>
+                                        <strong>Подъезд 1</strong>
+                                    </div>
+                                    <div class="choose-map-section-number choose-map-section-number-1" style="left:630px; top:423px">
+                                        15
+                                        <div class="choose-map-section-number-flats choose-map-section-number-flats-1">12</div>
+                                        <div class="choose-map-section-number-flats choose-map-section-number-flats-2">11</div>
+                                        <div class="choose-map-section-number-flats choose-map-section-number-flats-3">10</div>
+                                        <strong>Подъезд 1</strong>
+                                    </div>
+                                    <div class="choose-map-section-number" style="left:798px; top:356px">
+                                        16
+                                        <div class="choose-map-section-number-flats choose-map-section-number-flats-1">12</div>
+                                        <div class="choose-map-section-number-flats choose-map-section-number-flats-2">11</div>
+                                        <div class="choose-map-section-number-flats choose-map-section-number-flats-3">10</div>
+                                        <strong>Подъезд 1</strong><strong>Подъезд 2</strong>
+                                    </div>
+
+                                    <div class="choose-map-rooms">
+                                        <div class="choose-map-rooms-item">
+                                            <a href="#" class="choose-map-rooms-item-1">
+                                                <div class="choose-map-rooms-count">12</div>
+                                                <div class="choose-map-rooms-text">
+                                                    <div class="choose-map-rooms-title">1-комнатные</div>
+                                                    <div class="choose-map-rooms-price">от 3.000.000 &#8381;</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="choose-map-rooms-item">
+                                            <a href="#" class="choose-map-rooms-item-2">
+                                                <div class="choose-map-rooms-count">26</div>
+                                                <div class="choose-map-rooms-text">
+                                                    <div class="choose-map-rooms-title">2-комнатные</div>
+                                                    <div class="choose-map-rooms-price">от 5.000.000 &#8381;</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="choose-map-rooms-item">
+                                            <a href="#" class="choose-map-rooms-item-3">
+                                                <div class="choose-map-rooms-count">15</div>
+                                                <div class="choose-map-rooms-text">
+                                                    <div class="choose-map-rooms-title">3-комнатные</div>
+                                                    <div class="choose-map-rooms-price">от 7.000.000 &#8381;</div>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
+                                <!-- choose wrap END -->
+
                             </div>
-                            <!-- choose wrap END -->
-
                         </div>
                         <!-- choose content END -->
 
