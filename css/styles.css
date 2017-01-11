@@ -298,18 +298,49 @@ footer {height:160px; position:relative; margin:-160px 0 0 0; background:#fff}
 .window-order .form-submit {width:auto}
 
 .infrastructure {text-align:center; padding:29px 0 71px 0; position:relative; overflow:hidden; background:#fff; margin:0 0 -60px 0}
+.infrastructure .content {max-width:1180px}
 
-.infrastructure-photo {margin:39px 0 0 0; position:relative; width:100%; text-align:center}
+.infrastructure-photo {margin:42px 0 0 0; position:relative; width:100%; text-align:left}
 .infrastructure-wrap {margin:0 -190px}
-.infrastructure-container {position:relative; width:1180px; margin:0 auto}
-.infrastructure-container > img {display:block; padding:0 0 8px 0}
+.infrastructure-container {position:relative; width:1180px; height:600px; margin:0 auto; background:url(../images/infrastructure-map.jpg)}
 
-.infrastructure-social {margin:44px 0 0 0}
+.infrastructure-map-section-list {position:absolute; display:none; left:0; top:0}
+.infrastructure-map-section-list-wrap {position:absolute; left:-165px; bottom:20px; white-space:nowrap; font-size:15px; background:#fff; padding:12px 30px 20px 30px; box-shadow:0 15px 30px rgba(12, 24, 10, .5)}
+.infrastructure-map-section-list-wrap:after {content:""; display:block; width:0; height:0; position:absolute; bottom:-12px; left:50%; margin-left:-13px; border-top:12px solid #fff; border-left:13px solid transparent; border-right:13px solid transparent}
+.infrastructure-map-section-list-title {font:bold 25px/30px "Roboto Slab", serif; color:#252525; padding:11px 0 31px 0; min-width:270px; text-align:center}
+.infrastructure-map-section-list-progress-bar {position:relative; height:37px; font-size:15px; line-height:37px; text-align:center; color:#fff; background:#317726; margin:0 0 33px 0}
+.infrastructure-map-section-list-progress-bar-status {position:absolute; left:0; top:0; bottom:0; background:#54bc43}
+.infrastructure-map-section-list-progress-bar.red .infrastructure-map-section-list-progress-bar-status {background:#ef3e23}
+.infrastructure-map-section-list-progress-text {position:absolute; left:0; top:0; right:0; white-space:nowrap; color:#fff}
+.infrastructure-map-section-list-progress-text.invert {color:#fff}
+.infrastructure-map-section-list-progress-bar.red .infrastructure-map-section-list-progress-text {color:#fff}
+.infrastructure-map-section-list-progress-bar.red .infrastructure-map-section-list-progress-text.invert {color:#fff}
+.infrastructure-map-section-list-progress-values {display:none}
+.infrastructure-map-section-list-inner {display:table}
+.infrastructure-map-section-list-row {display:table-row}
+.infrastructure-map-section-list-name {display:table-cell; padding:8px 30px 11px 0; border-top:1px solid #e6e6e6}
+.infrastructure-map-section-list-name-1 {color:#629e2a}
+.infrastructure-map-section-list-name-2 {color:#006cb8}
+.infrastructure-map-section-list-name-3 {color:#c3a256}
+.infrastructure-map-section-list-row:first-child .infrastructure-map-section-list-name {border-top:none}
+.infrastructure-map-section-list-price {display:table-cell; color:#555; border-top:1px solid #e6e6e6; padding:8px 0 11px 0}
+.infrastructure-map-section-list-row:first-child .infrastructure-map-section-list-price {border-top:none}
+
+.infrastructure-map {position:absolute; left:0; top:0}
+
+.infrastructure-social {margin:46px 0 -7px 0}
 .infrastructure-social:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .infrastructure-social-item {float:left; width:20%}
 .infrastructure-social-icon {line-height:66px}
 .infrastructure-social-icon img {vertical-align:bottom}
-.infrastructure-social-name {padding:20px 0 0 0}
+.infrastructure-social-name {line-height:25px; padding:17px 0 0 0}
+.infrastructure-add {line-height:25px; width:820px; margin:37px auto 0 auto; text-align:left}
+.infrastructure-add:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.infrastructure-add-col {float:left; width:400px}
+.infrastructure-add-col:first-child {padding:0 20px 0 0}
+.infrastructure-add ul {margin:0}
+.infrastructure-add ul li {margin:0; padding:0 0 0 15px}
+.infrastructure-add ul li:before {width:4px; height:4px; border-radius:2px; background:#ef3e23; left:0; top:11px}
 
 .rules {background:#fafafa; text-align:center; padding:28px 0 87px 0}
 .rules-list {margin:60px auto 0 auto; max-width:1180px}
@@ -547,7 +578,7 @@ footer {height:160px; position:relative; margin:-160px 0 0 0; background:#fff}
 
 .choose-content {width:100%; position:relative; overflow:hidden; background:#f7f7f7; margin:0 auto}
 .choose-content-inner {margin:0 -100px}
-.choose-wrap {width:1056px; height:619px; position:relative; margin:0 auto; background:url(../images/map.jpg) no-repeat center}
+.choose-wrap {width:1280px; height:720px; position:relative; margin:0 auto; background:url(../images/map.jpg) no-repeat center}
 
 .choose-map-section-number {position:absolute; width:60px; height:60px; background:#ff6532; text-align:center; color:#fff; font:bold 20px/60px "Open Sans Condensed", sans-serif; border-radius:30px}
 .choose-map-section-number:before {content:""; display:block; width:3px; height:86px; background:#ff6532; position:absolute; left:50%; top:100%; margin-left:-1px}
@@ -563,7 +594,7 @@ footer {height:160px; position:relative; margin:-160px 0 0 0; background:#fff}
 
 .choose-map {position:absolute; left:0; top:0}
 
-.choose-map-rooms {position:absolute; top:60px; right:122px; width:210px}
+.choose-map-rooms {position:absolute; top:60px; right:210px; width:210px}
 .choose-map-rooms-item {height:60px; background:#fff; border-radius:16px; margin:0 0 10px 0; overflow:hidden}
 .choose-map-rooms-item a {display:block; text-decoration:none}
 .choose-map-rooms-count {float:left; color:#fff; line-height:60px; width:60px; text-align:center; height:60px; border-radius:16px}
@@ -830,20 +861,21 @@ h1+.campaigns-list {padding:0}
 .item-gallery-load {position:absolute; left:-9999px; top:-9999px; visibility:hidden}
 
 .mortgage {background:#fff}
-.mortgage-menu {height:580px; background:#000 url(../images/mortgage-menu.jpg) no-repeat center; background-size:cover}
+.mortgage-menu {height:640px; background:#000 url(../images/mortgage-menu.jpg) no-repeat center; background-size:cover}
 .mortgage-menu h2 {text-align:center; color:#fff; font-size:40px; line-height:40px; margin:0; padding:95px 0 55px 0}
 .mortgage-menu-list {position:relative; margin:0 100px}
 .mortgage-menu-list-inner {width:100%; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap}
 .mortgage-menu-item {display:inline-block; vertical-align:top; width:33.33%}
-.mortgage-menu-item-wrap {height:390px; position:relative}
+.mortgage-menu-item-wrap {height:450px; position:relative}
 .mortgage-menu-item.active .mortgage-menu-item-wrap:after {content:""; display:block; width:0; height:0; position:absolute; left:50%; bottom:0; margin-left:-21px; border-bottom:21px solid #fff; border-left:21px solid transparent; border-right:21px solid transparent}
 .mortgage-menu-item a {display:block; padding:10px; text-decoration:none; color:#252525}
 .mortgage-menu-item a:hover {padding:0; border:10px solid #df5022}
 .mortgage-menu-item.active a {padding:0; border:10px solid #ff6532}
-.mortgage-menu-item-inner {height:240px; background:#fff}
+.mortgage-menu-item-inner {height:300px; background:#fff}
 .mortgage-menu-item-logo {padding:41px 0 0 0; text-align:center; height:87px}
 .mortgage-menu-item-logo img {margin:0 auto}
 .mortgage-menu-item-text {font:bold 20px/30px "Roboto Slab", serif; text-align:center; letter-spacing:0}
+.mortgage-menu-item-license {font-size:12px; text-align:center; color:#555; line-height:20px; letter-spacing:0; padding:32px 0 0 0}
 .mortgage-menu-list .slick-dots {text-align:center; font-size:0; line-height:0; letter-spacing:-1px; position:absolute; left:0; right:0; bottom:66px; margin:0}
 .mortgage-menu-list .slick-dots li {margin:0 5px; padding:0; display:inline-block; vertical-align:top}
 .mortgage-menu-list .slick-dots li:before {display:none}
@@ -892,3 +924,5 @@ h1+.campaigns-list {padding:0}
 .mortgage-results-form .form-submit {width:100%}
 .mortgage-results-form-close-link {display:block; text-align:center; text-transform:uppercase; font:bold 12px/30px "Roboto Slab", serif; color:#ff6532; text-decoration:none}
 .mortgage-results-form-close-link:hover {color:#df5022}
+
+.mortgage-results-hint {font-size:11px; line-height:15px; margin:30px 0 0 0}
