@@ -309,8 +309,9 @@ footer {height:160px; position:relative; margin:-160px 0 0 0; background:#fff}
 .infrastructure-map-section-list-wrap:after {content:""; display:block; width:0; height:0; position:absolute; bottom:-12px; left:50%; margin-left:-13px; border-top:12px solid #fff; border-left:13px solid transparent; border-right:13px solid transparent}
 .infrastructure-map-section-list-title {font:bold 25px/30px "Roboto Slab", serif; color:#252525; padding:11px 0 31px 0; min-width:270px; text-align:center}
 .infrastructure-map-section-list-progress-bar {position:relative; height:37px; font-size:15px; line-height:37px; text-align:center; color:#fff; background:#317726; margin:0 0 33px 0}
+.infrastructure-map-section-list-progress-bar.red {background:#c60c0c}
 .infrastructure-map-section-list-progress-bar-status {position:absolute; left:0; top:0; bottom:0; background:#54bc43}
-.infrastructure-map-section-list-progress-bar.red .infrastructure-map-section-list-progress-bar-status {background:#ef3e23}
+.infrastructure-map-section-list-progress-bar.red .infrastructure-map-section-list-progress-bar-status {background:#ff1212}
 .infrastructure-map-section-list-progress-text {position:absolute; left:0; top:0; right:0; white-space:nowrap; color:#fff}
 .infrastructure-map-section-list-progress-text.invert {color:#fff}
 .infrastructure-map-section-list-progress-bar.red .infrastructure-map-section-list-progress-text {color:#fff}
@@ -321,7 +322,7 @@ footer {height:160px; position:relative; margin:-160px 0 0 0; background:#fff}
 .infrastructure-map-section-list-name {display:table-cell; padding:8px 30px 11px 0; border-top:1px solid #e6e6e6}
 .infrastructure-map-section-list-name-1 {color:#629e2a}
 .infrastructure-map-section-list-name-2 {color:#006cb8}
-.infrastructure-map-section-list-name-3 {color:#c3a256}
+.infrastructure-map-section-list-name-3 {color:#f53d20}
 .infrastructure-map-section-list-row:first-child .infrastructure-map-section-list-name {border-top:none}
 .infrastructure-map-section-list-price {display:table-cell; color:#555; border-top:1px solid #e6e6e6; padding:8px 0 11px 0}
 .infrastructure-map-section-list-row:first-child .infrastructure-map-section-list-price {border-top:none}
