@@ -60,12 +60,12 @@ form {margin:20px 0; padding:0}
 .form-input textarea {height:auto; overflow:auto; resize:none; font-weight:normal}
 .form-input input.error,
 .form-input textarea.error {border-color:#ef3e23}
-.form-input input::-webkit-input-placeholder {color:rgba(85, 85, 85, .5); opacity:1; font:bold 15px/20px "Open Sans Condensed", sans-serif}
-.form-input input::-moz-placeholder {color:rgba(85, 85, 85, .5); opacity:1; font:bold 15px/20px "Open Sans Condensed", sans-serif}
-.form-input input:-ms-input-placeholder {color:rgba(85, 85, 85, .5); opacity:1; font:bold 15px/20px "Open Sans Condensed", sans-serif}
-.form-input textarea::-webkit-input-placeholder {color:rgba(85, 85, 85, .5); opacity:1; font:bold 15px/20px "Open Sans Condensed", sans-serif}
-.form-input textarea::-moz-placeholder {color:rgba(85, 85, 85, .5); opacity:1; font:bold 15px/20px "Open Sans Condensed", sans-serif}
-.form-input textarea:-ms-input-placeholder {color:rgba(85, 85, 85, .5); opacity:1; font:bold 15px/20px "Open Sans Condensed", sans-serif}
+.form-input input::-webkit-input-placeholder {color:rgba(85, 85, 85, .5); opacity:1}
+.form-input input::-moz-placeholder {color:rgba(85, 85, 85, .5); opacity:1}
+.form-input input:-ms-input-placeholder {color:rgba(85, 85, 85, .5); opacity:1}
+.form-input textarea::-webkit-input-placeholder {color:rgba(85, 85, 85, .5); opacity:1}
+.form-input textarea::-moz-placeholder {color:rgba(85, 85, 85, .5); opacity:1}
+.form-input textarea:-ms-input-placeholder {color:rgba(85, 85, 85, .5); opacity:1}
 .form-input input:focus,
 .form-input textarea:focus {border-color:#646974}
 .form-input label.error {display:block; position:absolute; right:100%; top:0; margin:0 27px 0 0; white-space:nowrap; color:#fff; padding:0 30px; background:#ef3e23; font-size:15px; line-height:50px}
@@ -194,7 +194,7 @@ nav span {display:table-cell; vertical-align:middle; height:79px; padding:0 20px
 .map-text p.map-text-title {text-transform:uppercase; color:#629e2a; font-size:12px; margin:0 0 -6px 0}
 .map-ways {position:absolute; left:0; bottom:0; width:100%; height:60px; background:#499e3b}
 .map-container-contacts .map-ways {bottom:auto; top:0}
-.map-way-title {float:left; width:99px; padding:0 0 0 30px; color:#fff; font:300 15px/60px "Open Sans Condensed", sans-serif}
+.map-way-title {float:left; width:114px; padding:0 0 0 15px; color:#fff; font:14px/60px "Roboto Slab", serif}
 .map-ways:before {content:""; display:block; width:1px; height:32px; position:absolute; left:60px; top:11px; background:#5c9045}
 .map-container-contacts .map-ways:before {left:250px}
 .map-way-auto {float:left; position:relative}
@@ -207,7 +207,7 @@ nav span {display:table-cell; vertical-align:middle; height:79px; padding:0 20px
 .map-way-auto a:after {content:""; display:block; position:absolute; width:26px; height:25px; background:url(../images/map-ways.png) left top; left:17px; top:17px}
 .map-container-contacts .map-way-auto a:after {top:12px}
 .map-way-auto.active a:after {background-position:left -25px}
-.map-container-contacts .map-way-auto a:before {content:"на авто"; display:block; position:absolute; left:53px; top:-5px; color:#fff; font:300 15px/60px "Open Sans Condensed", sans-serif}
+.map-container-contacts .map-way-auto a:before {content:"на авто"; display:block; position:absolute; left:53px; top:-5px; color:#fff; font:14px/60px "Roboto Slab", serif}
 .map-container-contacts .map-way-auto a:hover:before {color:#fff}
 .map-container-contacts .map-way-auto.active a:before {color:#252525}
 .map-way-foot {float:left; margin:0 0 0 -1px; position:relative}
@@ -220,7 +220,7 @@ nav span {display:table-cell; vertical-align:middle; height:79px; padding:0 20px
 .map-way-foot a:after {content:""; display:block; position:absolute; width:26px; height:25px; background:url(../images/map-ways.png) -26px top; left:15px; top:17px}
 .map-container-contacts .map-way-foot a:after {top:12px}
 .map-way-foot.active a:after {background-position:-26px -25px}
-.map-container-contacts .map-way-foot a:before {content:"пешком"; display:block; position:absolute; left:47px; top:-5px; color:#fff; font:300 15px/60px "Open Sans Condensed", sans-serif}
+.map-container-contacts .map-way-foot a:before {content:"пешком"; display:block; position:absolute; left:47px; top:-5px; color:#fff; font:14px/60px "Roboto Slab", serif}
 .map-container-contacts .map-way-foot a:hover:before {color:#fff}
 .map-container-contacts .map-way-foot.active a:before {color:#252525}
 .map-callback {float:right; width:260px; height:60px; color:#fff; text-align:center; text-transform:uppercase; text-decoration:none; font:bold 15px/60px "Roboto Slab", serif; background:#ff6532; position:relative}
@@ -229,8 +229,8 @@ nav span {display:table-cell; vertical-align:middle; height:79px; padding:0 20px
 .map-ways-content {position:absolute; left:-9999px; top:-9999px; width:100%; background:#fff}
 .map-ways-content.open {left:0; top:0}
 .map-container-contacts .map-ways-content.open {top:60px}
-.map-ways-close {display:block; height:30px; background:#499e3b; color:#fff; text-transform:uppercase; text-decoration:none; text-align:center; font-size:12px; line-height:30px}
-.map-container-contacts .map-ways-close {position:absolute; left:0; bottom:-38px; width:100%}
+.map-ways-close {display:block; height:30px; background:#499e3b; color:#fff; text-transform:uppercase; text-decoration:none; text-align:center; font-size:12px; line-height:30px; font-family:"Roboto Slab", serif}
+.map-container-contacts .map-ways-close {position:absolute; left:0; bottom:-34px; width:100%}
 .map-ways-close:hover {color:#fff; background:#3d8731}
 .map-ways-close:before,
 .map-ways-close:after {content:""; display:inline-block; vertical-align:top; width:15px; height:9px; background:url(../images/map-ways-close.png); margin:11px 20px 0 20px}
@@ -245,11 +245,11 @@ nav span {display:table-cell; vertical-align:middle; height:79px; padding:0 20px
 .map-ways-wrap h3 {margin:0; padding:30px 0 33px 0}
 .map-ways-item-detail {position:relative; overflow:auto; height:420px; width:330px}
 .map-container-contacts .map-ways-item-detail {height:380px}
-.map-ways-item-detail-inner {width:290px; padding:7px 0; font:300 20px/25px "Open Sans Condensed", sans-serif; color:#252525}
+.map-ways-item-detail-inner {width:290px; padding:7px 0}
 .map-ways-item-detail-inner ol {margin:0}
 .map-ways-item-detail-inner ol li {margin:0; border-top:1px solid #e6e6e6; padding:22px 0 28px 30px}
 .map-ways-item-detail-inner ol li:first-child {padding-top:0; border-top:none}
-.map-ways-item-detail-inner ol li:before {content:counter(point); color:#252525; font-family:"Open Sans Condensed", sans-serif; top:22px}
+.map-ways-item-detail-inner ol li:before {content:counter(point); color:#252525; font-family:"Roboto Slab", serif; top:22px}
 .map-ways-item-detail-inner ol li:first-child:before {top:0}
 
 footer {height:160px; position:relative; margin:-160px 0 0 0; background:#fff}
@@ -363,11 +363,9 @@ footer {height:160px; position:relative; margin:-160px 0 0 0; background:#fff}
 
 .plans {background:#fff; padding:0 70px; position:relative; overflow:hidden}
 .plans:before {content:""; display:block; width:50%; height:100%; position:absolute; right:0; top:0; background:#ff6533}
-.plans-container {max-width:1180px; margin:0 auto; position:relative; background:#fff}
-.plans-container:before {content:""; display:block; width:80px; height:100%; position:absolute; right:0; top:0; background:#ff6533}
-.plans-container:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.plans-container {display:table; width:100%; max-width:1180px; margin:0 auto; position:relative; background:#fff; border-collapse:collapse}
 
-.plans-filter {float:left; width:50%; padding:72px 10px 85px 0; box-sizing:border-box}
+.plans-filter {display:table-cell; vertical-align:top; width:50%; padding:72px 10px 85px 0; box-sizing:border-box}
 .plans-filter h2 {margin:0}
 .plans-rooms {margin:38px 0 0 -2px}
 .plans-rooms:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
@@ -403,11 +401,12 @@ footer {height:160px; position:relative; margin:-160px 0 0 0; background:#fff}
 .plan-types-variants-more {margin:45px 0 0 0; display:block; border-radius:3px; background:#ff6532; color:#fff; text-decoration:none; width:280px; height:50px; text-align:center; text-transform:uppercase; font:bold 15px/50px "Roboto Slab", serif}
 .plan-types-variants-more:hover {background:#df5022}
 
-.plans-compare {float:right; padding:0 0 0 10px; width:380px; box-sizing:border-box; position:relative}
-.plans-compare-text {position:absolute; left:0; bottom:65px; width:100%; padding:0 0 0 10px; box-sizing:border-box; color:#252525; text-align:center}
+.plans-compare {display:table-cell; vertical-align:top; padding:0 0 0 10px; width:380px; box-sizing:border-box; position:relative}
+.plans-compare-text {position:relative; left:auto; bottom:auto; width:100%; padding:65px 0 0 10px; box-sizing:border-box; color:#252525; text-align:center}
 
 .plans .plans-compare {padding:0 80px 0 90px; width:50%}
-.plans .plans-compare-text {left:90px; bottom:auto; top:139px; width:auto; padding:0; right:80px}
+.plans .plans-compare:before {content:""; display:block; width:80px; position:absolute; right:0; top:0; bottom:0; background:#ff6533}
+.plans .plans-compare-text {position:absolute; left:90px; bottom:auto; top:139px; width:auto; padding:0; right:80px}
 
 .search {position:absolute; left:50%; bottom:50px; margin-left:-490px; z-index:3; width:980px; height:180px; background:#fff; border-radius:5px}
 .search h4 {margin:0 0 20px 0; padding:38px 0 0 40px}
@@ -421,8 +420,8 @@ footer {height:160px; position:relative; margin:-160px 0 0 0; background:#fff}
 .page-404-content {text-align:center; color:#252525; padding:175px 0 0 0}
 .page-404-content a {color:#252525; text-decoration:underline}
 .page-404-content a:hover {text-decoration:none}
-.page-404-title {font:bold 120px/120px "Open Sans Condensed", sans-serif}
-.page-404-text {font:300 20px/25px "Open Sans Condensed", sans-serif; padding:40px 0 0 0}
+.page-404-title {font:bold 120px/120px "Roboto Slab", serif}
+.page-404-text {font:20px/25px "Roboto Slab", serif; padding:40px 0 0 0}
 
 .webcam-slider {position:relative; margin:0 0 -60px 0}
 .webcam-slider-content {position:relative}
@@ -436,20 +435,19 @@ footer {height:160px; position:relative; margin:-160px 0 0 0; background:#fff}
 .webcam-slider-content li.play > div {left:0; top:0}
 .webcam-slider-content .flowplayer {display:block; position:absolute; left:0; top:0; width:100%; height:100%}
 .webcam-play-preview {position:absolute; left:0; top:0; width:100%; height:100%; background:no-repeat center; background-size:cover; opacity:.5}
-.webcam-play-start {position:absolute; left:0; top:50%; margin-top:-85px; width:100%; text-align:center; text-transform:uppercase; font-weight:bold; font-size:20px; line-height:25px; background:url(../images/webcam-play.png) no-repeat center top; padding:145px 0 0 0}
+.webcam-play-start {position:absolute; left:0; top:50%; margin-top:-85px; width:100%; text-align:center; font:bold 25px/30px "Roboto Slab", serif; background:url(../images/webcam-play.png) no-repeat center top; padding:138px 0 0 0}
 .webcam-slider-ctrl {position:absolute; left:0; bottom:40px; right:0; height:0px; width:100%; z-index:3}
 .webcam-slider-ctrl-inner {margin:0 auto; max-width:1170px; padding:0 70px; position:relative}
 .webcam-slider-ctrl-list {position:absolute; left:0; right:0; bottom:0px; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; text-align:center}
-.webcam-slider-ctrl-list a {display:inline-block; vertical-align:top; width:60px; height:60px; margin:0 0 0 10px; border-radius:30px; background:#fff; text-align:center; font-weight:bold; font-size:15px; line-height:15px; color:#629e2a; text-decoration:none}
+.webcam-slider-ctrl-list a {display:inline-block; vertical-align:top; width:60px; height:60px; margin:0 0 0 10px; border-radius:30px; background:#fff; text-align:center; font-weight:bold; font-size:16px; line-height:15px; color:#629e2a; text-decoration:none}
 .webcam-slider-ctrl-list a:before {content:""; display:block; width:22px; height:19px; margin:11px auto 8px auto; background:url(../images/webcam-ctrl.png)}
 .webcam-slider-ctrl-list a:hover {color:#fff; background:#629e2a}
 .webcam-slider-ctrl-list a:hover:before {background-position:left -19px}
 .webcam-slider-ctrl-list a.active {color:#fff; background:#629e2a}
 .webcam-slider-ctrl-list a.active:before {background-position:left -19px}
 
-.contacts {font:300 15px/25px "Open Sans Condensed", sans-serif}
-.contacts-name {color:#629e2a; padding:10px 0 0 0}
-.contacts-value {font-size:20px; color:#252525; padding:0 0 16px 0}
+.contacts-name {color:#499e3b; padding:10px 0 0 0; font-family:"Roboto Slab", serif}
+.contacts-value {padding:0 0 10px 0}
 
 .gallery {margin:0 0 -45px 0}
 .gallery h1 {text-align:center}
@@ -580,7 +578,7 @@ footer {height:160px; position:relative; margin:-160px 0 0 0; background:#fff}
 .choose-content-inner {margin:0 -100px}
 .choose-wrap {width:1280px; height:720px; position:relative; margin:0 auto; background:url(../images/map.jpg) no-repeat center}
 
-.choose-map-section-number {position:absolute; width:60px; height:60px; background:#ff6532; text-align:center; color:#fff; font:bold 20px/60px "Open Sans Condensed", sans-serif; border-radius:30px}
+.choose-map-section-number {position:absolute; width:60px; height:60px; background:#ff6532; text-align:center; color:#fff; font:bold 20px/60px "Roboto Slab", serif; border-radius:30px}
 .choose-map-section-number:before {content:""; display:block; width:3px; height:86px; background:#ff6532; position:absolute; left:50%; top:100%; margin-left:-1px}
 .choose-map-section-number-1:before {height:24px}
 .choose-map-section-number-flats {display:none; position:absolute; right:-13px; top:-13px; width:33px; height:33px; border-radius:17px; color:#fff; text-align:center; font:15px/33px Roboto, sans-serif}
@@ -641,7 +639,7 @@ footer {height:160px; position:relative; margin:-160px 0 0 0; background:#fff}
 .campaign-link-discount {background-position:left top}
 .campaign-link-construction {background-position:left -20px}
 .campaign-link-gift {background-position:left -40px}
-.campaign-link span {display:none; position:absolute; left:50%; margin-left:-25px; top:31px; white-space:nowrap; color:#fff; font-size:16px; font-family:"Open Sans", sans-serif; height:39px; line-height:39px; padding:0 20px; background:#ff6532; border-radius:3px}
+.campaign-link span {display:none; position:absolute; left:50%; margin-left:-25px; top:31px; white-space:nowrap; color:#fff; font-size:16px; font-family:"Roboto Slab", serif; height:39px; line-height:39px; padding:0 20px; background:#ff6532; border-radius:3px}
 .campaign-link span:after {content:""; display:block; width:0; height:0; border-bottom:6px solid #ff6532; border-left:6px solid transparent; border-right:6px solid transparent; position:absolute; top:-6px; left:17px}
 .campaign-link:hover span {display:block}
 
@@ -660,7 +658,7 @@ h1+.campaigns-list {padding:0}
 .campaigns-item dt {margin:0; padding:10px 0 0 0; font-size:15px; line-height:20px; letter-spacing:0; color:#629e2a}
 .campaigns-item dd {margin:0; padding:0; font-size:15px; line-height:20px; letter-spacing:0; color:#818181}
 
-.campaigns-period {color:#629e2a; margin-top:-29px}
+.campaigns-period {color:#499e3b; margin-top:-19px; font-size:15px}
 
 .campaigns-top {background:#000 url(../images/campaigns-top.jpg) no-repeat center; background-size:cover; padding:0 0 81px 0}
 .campaigns-top-inner {max-width:940px; margin:0 auto; color:#fff}
@@ -675,7 +673,7 @@ h1+.campaigns-list {padding:0}
 .campaigns-top-item:first-child:before {display:none}
 .campaigns-top-item-title {font:bold 20px/25px "Roboto Slab", sans-serif; position:relative; top:-6px}
 .campaigns-top-item-discount {font:bold 40px/40px "Roboto Slab", sans-serif; padding:13px 0 40px 0; color:#629e2a}
-.campaigns-top-item-detail {display:block; height:36px; color:#fff; font:bold 15px/36px "Open Sans Condensed", sans-serif; position:relative; margin:0 40px; text-decoration:none}
+.campaigns-top-item-detail {display:block; height:36px; color:#fff; font:bold 15px/36px "Roboto Slab", serif; position:relative; margin:0 40px; text-decoration:none}
 .campaigns-top-item-detail:after {content:""; display:block; border:1px solid #fff; border-radius:3px; opacity:.5; position:absolute; left:1px; top:1px; right:1px; bottom:1px}
 .campaigns-top-item-detail:hover {color:#fff}
 .campaigns-top-item-detail:hover:after {border-width:2px; opacity:1; border-color:#ff6532; left:0; top:0; right:0; bottom:0}
@@ -683,34 +681,33 @@ h1+.campaigns-list {padding:0}
 .timer-wrap {text-align:center; padding:28px 0 57px 0}
 .timer-wrap-inner {display:inline-block; vertical-align:top; margin:0 0 0 -5px}
 
-.news {margin:-18px 0 0 0}
-.news-item {border-bottom:1px solid #dddddf; padding:0 0 29px 0}
-.news-item-title {font:bold 20px/25px "Open Sans Condensed", sans-serif; padding:25px 0 0 0}
+.news-item {border-bottom:1px solid #dddddf; padding:0 0 39px 0}
+.news-item-title {font:bold 20px/25px "Roboto Slab", serif; padding:35px 0 0 0}
 .news-item-title a {color:#629e2a; text-decoration:none}
 .news-item-title a:hover {text-decoration:underline}
-.news-item-anonce {line-height:25px; padding:13px 0 0 0; font:300 20px/25px "Open Sans Condensed", sans-serif; color:#252525}
-.news-item-date {line-height:25px; color:#818181; font:300 15px/25px "Open Sans Condensed", sans-serif; padding:20px 0 0 0}
+.news-item-anonce {padding:14px 0 0 0}
+.news-item-date {color:#818181; padding:25px 0 0 0}
 
-.news-detail-date {font:300 25px/25px "Open Sans Condensed", sans-serif; color:#818181}
+.news-detail-date {font:bold 15px/25px "Roboto Slab", serif; color:#499e3b; margin:-20px 0 40px 0}
 
 .news-back {margin:48px 0 20px 0}
 .news-back:first-child {margin-top:0; padding:100px 0 0 0}
 .news-back+h1 {padding-top:0; margin-top:-3px}
 .news-back:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
-.news-back-link {float:left; font:300 20px/25px "Open Sans Condensed", sans-serif; color:#629e2a; text-decoration:underline; margin:3px 0 0 0}
+.news-back-link {float:left; font:15px/25px "Roboto Slab", serif; color:#629e2a; text-decoration:underline; margin:3px 0 0 0}
 .news-back-link:hover {text-decoration:none}
 .news-likes {float:right}
 
-.docs-office {text-align:center; background:#fff; margin:43px 0 39px 0; padding:20px; font:300 20px/25px "Open Sans Condensed", sans-serif}
-.docs-hint {font:300 20px/25px "Open Sans Condensed", sans-serif; margin:25px 0}
+.docs-office {text-align:center; background:#fff; margin:43px 0 39px 0; padding:20px}
+.docs-hint {margin:25px 0}
 
-.docs {padding:2px 0 80px 0; font-family:"Open Sans Condensed", sans-serif}
-.docs-item {display:block; border-bottom:1px solid #e6e6e6; position:relative; padding:20px 0 18px 46px; margin:0 0 -1px 0; text-decoration:none}
-.docs-item img {position:absolute; left:0; top:20px}
-.docs-item-title {color:#818181; font-size:20px; line-height:25px}
+.docs {padding:2px 0 80px 0}
+.docs-item {display:block; border-bottom:1px solid #e6e6e6; position:relative; padding:30px 0 28px 46px; margin:0 0 -1px 0; text-decoration:none}
+.docs-item img {position:absolute; left:0; top:30px}
+.docs-item-title {color:#818181; font-family:"Roboto Slab", serif}
 .docs-item:hover .docs-item-title {text-decoration:underline}
 .docs-item-title span {font-weight:normal; color:#629e2a}
-.docs-item-date {color:#818181; padding:1px 0 0 0}
+.docs-item-date {color:#818181; font-size:12px}
 
 .other-flats {padding:28px 0 40px 0; background:#fff; margin:0 0 -60px 0}
 .other-flats h2 {text-align:center; margin-bottom:50px}
@@ -734,13 +731,15 @@ h1+.campaigns-list {padding:0}
 .flat-plan-container {width:860px; margin:0 auto; padding:0 0 0 80px; position:relative; background:#f5f5f5}
 .flat-plan-container:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 
+.flat-plan-wrap {display:table; width:100%}
+
 .flat-plan-container h1 {position:relative; z-index:2}
 .flat-plan-container h1 em {display:inline-block; font-style:normal; padding:0 20px 0 0; line-height:64px; margin:-12px 0; background:#f5f5f5}
 .flat-plan-container h1 span {font-weight:300}
 .flat-subtitle {font:bold 20px/25px "Roboto Slab", serif; color:#499e3b; margin:-30px 0 4px 0}
 .flat-descr {padding:19px 0 40px 0}
 
-.flat-info {float:left; width:50%; padding:27px 10px 70px 0; box-sizing:border-box}
+.flat-info {display:table-cell; vertical-align:top; width:50%; padding:27px 10px 70px 0; box-sizing:border-box}
 .flat-info-inner {width:380px}
 .flat-info-inner dl {margin:0; padding:0}
 .flat-info-inner dl:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
@@ -778,7 +777,7 @@ h1+.campaigns-list {padding:0}
 .flat-builds-content {position:absolute; left:0; top:0}
 .flat-builds-content area {cursor:default}
 .flat-builds-content h3 {position:absolute; left:0; top:38px; margin:0; color:#fff; text-align:center; width:100%; text-shadow:0 1px 0 rgba(18, 30, 53, .5)}
-.flat-map-section-number {position:absolute; width:43px; height:43px; background:#ff6532; text-align:center; color:#fff; font:bold 15px/43px "Open Sans Condensed", sans-serif; border-radius:43px}
+.flat-map-section-number {position:absolute; width:43px; height:43px; background:#ff6532; text-align:center; color:#fff; font:bold 15px/43px "Roboto Slab", serif; border-radius:43px}
 .flat-map-section-number span {display:block; width:3px; background:#ff6532; position:absolute; left:20px; top:100%}
 .flat-map-section-number strong {display:block; width:59px; height:20px; background:#fff; color:#555; font:9px/20px Roboto, sans-serif; position:absolute; left:-8px; top:49px}
 .flat-map-section-number strong+strong {top:71px}
@@ -787,8 +786,8 @@ h1+.campaigns-list {padding:0}
 .infrastructure-detail {position:relative; min-height:800px}
 .infrastructure-detail #map {position:absolute; left:0; top:0; width:100%; height:100%}
 
-.infrastructure-list {position:absolute; left:40px; top:100px; width:220px; padding:0 30px; background:#fff; background:rgba(255, 255, 255, .9); color:#252525; font:300 20px/20px "Open Sans Condensed", sans-serif}
-.infrastructure-list-title {font:bold 20px/25px "Open Sans Condensed", sans-serif; padding:26px 0 0 0; color:#252525}
+.infrastructure-list {position:absolute; left:40px; top:100px; width:220px; padding:0 30px; background:#fff; background:rgba(255, 255, 255, .9); color:#252525}
+.infrastructure-list-title {font:bold 20px/25px "Roboto Slab", serif; padding:26px 0 0 0; color:#252525}
 .infrastructure-list-text {padding:16px 0 0 0}
 .infrastructure-list ul {margin:0; padding:27px 0 26px 0; list-style:none}
 .infrastructure-list ul li {margin:10px 0 0 0; padding:0 0 0 70px; position:relative}
