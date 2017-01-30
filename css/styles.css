@@ -532,10 +532,10 @@ footer {height:160px; position:relative; margin:-160px 0 0 0; background:#fff}
 
 .main-info {position:relative; background:#fafafa}
 .main-info:before {content:""; display:block; width:50%; height:100%; position:absolute; left:0; top:0; background:#f5f5f5}
-.main-info-inner {position:relative; padding:0 110px; max-width:1180px; margin:0 auto}
+.main-info-inner {position:relative; padding:0 70px; max-width:1180px; margin:0 auto}
 .main-info-wrap {display:table; width:100%}
-.main-campaigns {display:table-cell; vertical-align:top; width:50%; box-sizing:border-box; padding:0 110px 127px 0; position:relative}
-.main-news {display:table-cell; vertical-align:top; width:50%; box-sizing:border-box; padding:0 0 127px 110px; position:relative}
+.main-campaigns {display:table-cell; vertical-align:top; width:50%; box-sizing:border-box; padding:0 70px 127px 0; position:relative}
+.main-news {display:table-cell; vertical-align:top; width:50%; box-sizing:border-box; padding:0 0 127px 70px; position:relative}
 .main-info-title {font:bold 30px/30px "Roboto Slab", serif; color:#252525; padding:70px 0 0 0}
 .main-info-item {border-top:1px solid #e6e6e6; padding:0 0 48px 0}
 .main-info-item:first-child {border-top:none}
@@ -843,7 +843,7 @@ h1+.campaigns-list {padding:0}
 .photo-gallery-ctrl a:first-child {margin:0}
 .photo-gallery-ctrl a.active {background:#499e3b}
 
-.item-gallery {position:fixed; left:-9999px; top:0; width:100%; height:100%; z-index:99997; overflow:auto; background:rgba(0, 35, 103, .85)}
+.item-gallery {position:fixed; left:-9999px; top:0; width:100%; height:100%; z-index:99997; overflow:auto; background:rgba(73, 156, 60, .85)}
 .item-gallery a:after {display:none}
 .item-gallery-open {left:0}
 .item-gallery-container {position:relative; width:1080px; margin:0 auto}

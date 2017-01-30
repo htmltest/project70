@@ -1082,7 +1082,7 @@ var stopScrollGallery = false;
             }
             $('.slider').css({'padding-top': maxHeight + 'px'});
 
-            var curWidth = $('.slider').width();
+            var curWidth = $('.slider').width() + 20;
             var curHeight = curWidth * .5625;
             if (curHeight < maxHeight) {
                 curHeight = maxHeight;
