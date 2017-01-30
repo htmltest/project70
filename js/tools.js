@@ -647,6 +647,12 @@ var stopScrollGallery = false;
             }
         });
 
+        $(document).click(function(e) {
+            if ($(e.target).hasClass('item-gallery')) {
+                itemGalleryClose();
+            }
+        });
+
         function itemGalleryClose() {
             if ($('.item-gallery-open').length > 0) {
                 $('.item-gallery').removeClass('item-gallery-open');
