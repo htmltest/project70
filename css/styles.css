@@ -580,23 +580,23 @@ footer {height:160px; position:relative; margin:-160px 0 0 0; background:#fff}
 
 .choose-content {width:100%; position:relative; overflow:hidden; background:#f7f7f7; margin:0 auto}
 .choose-content-inner {margin:0 -100px}
-.choose-wrap {width:1280px; height:720px; position:relative; margin:0 auto; background:url(../images/map.jpg) no-repeat center}
+.choose-wrap {width:1201px; height:619px; position:relative; margin:0 auto; background:url(../images/map.jpg) no-repeat center}
 
-.choose-map-section-number {position:absolute; width:60px; height:60px; background:#ff6532; text-align:center; color:#fff; font:bold 20px/60px "Roboto Slab", serif; border-radius:30px}
+.choose-map-section-number {position:absolute; width:40px; height:40px; background:#ff6532; text-align:center; color:#fff; font:bold 20px/40px "Roboto Slab", serif; border-radius:30px}
 .choose-map-section-number:before {content:""; display:block; width:3px; height:86px; background:#ff6532; position:absolute; left:50%; top:100%; margin-left:-1px}
 .choose-map-section-number-1:before {height:24px}
 .choose-map-section-number-flats {display:none; position:absolute; right:-13px; top:-13px; width:33px; height:33px; border-radius:17px; color:#fff; text-align:center; font:15px/33px Roboto, sans-serif}
 .choose-map-section-number-flats-1 {background:#629e2a}
 .choose-map-section-number-flats-2 {background:#006cb8}
 .choose-map-section-number-flats-3 {background:#f53d20}
-.choose-map-section-number strong {display:block; width:82px; height:28px; background:#fff; color:#555; font:13px/28px Roboto, sans-serif; position:absolute; left:-12px; top:65px; cursor:pointer}
-.choose-map-section-number strong+strong {top:97px}
+.choose-map-section-number strong {display:block; width:82px; height:28px; background:#fff; color:#555; font:13px/28px Roboto, sans-serif; position:absolute; left:-21px; top:46px; cursor:pointer}
+.choose-map-section-number strong+strong {top:78px}
 .choose-map-section-number strong.active {color:#fff; background:#f53d20}
 .choose-map-section-number-1 strong {display:none}
 
 .choose-map {position:absolute; left:0; top:0}
 
-.choose-map-rooms {position:absolute; top:60px; right:210px; width:210px}
+.choose-map-rooms {position:absolute; top:60px; right:185px; width:210px}
 .choose-map-rooms-item {height:60px; background:#fff; border-radius:16px; margin:0 0 10px 0; overflow:hidden}
 .choose-map-rooms-item a {display:block; text-decoration:none}
 .choose-map-rooms-count {float:left; color:#fff; line-height:60px; width:60px; text-align:center; height:60px; border-radius:16px}
@@ -606,6 +606,12 @@ footer {height:160px; position:relative; margin:-160px 0 0 0; background:#fff}
 .choose-map-rooms-text {float:left; padding:10px 0 0 20px}
 .choose-map-rooms-title {color:#555}
 .choose-map-rooms-price {font:bold 15px/20px "Roboto Slab", serif; color:#499e3b; margin-top:-1px}
+
+.choose-wrap .infrastructure-map-section-list {position:fixed; z-index:999}
+.choose-wrap .infrastructure-map-section-list-wrap {left:55px; bottom:auto; top:-38px}
+.choose-wrap .infrastructure-map-section-list-wrap:after {bottom:auto; top:30px; left:-12px; margin-left:0; border-left:none; border-right:12px solid #fff; border-top:13px solid transparent; border-bottom:13px solid transparent}
+.choose-wrap .infrastructure-map-section-list-right .infrastructure-map-section-list-wrap {left:auto; right:55px}
+.choose-wrap .infrastructure-map-section-list-right .infrastructure-map-section-list-wrap:after {left:auto; right:-12px; border-right:none; border-left:12px solid #fff}
 
 .choose-window {display:none; background:#f7f7f7}
 .choose-window.open {display:block}
