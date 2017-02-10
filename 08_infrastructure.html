@@ -126,9 +126,9 @@
                                             ['ТЦ "ВЗОИ" - 1 км',                    4,  55.672526,  37.285142   ],
                                             ['Сбербанк - 170 м',                    6,  55.6648,    37.282793   ],
                                             ['Лаборатория Инвитро - 200 м',         5,  55.664499,  37.2845     ],
-                                            ['Городская поликлиника No3 - 70 м',    5,  55.663997,  37.284381   ],
-                                            ['ТЦ "Времена года" - 860 м',                4,  55.670688,  37.281044   ],
-                                            ['ТЦ "Одинцовское подворье" - 1 км',    4,  55.672684,  37.279998   ]
+                                            ['Городская поликлиника No3 - 70 м',    10, 55.663997,  37.284381   ],
+                                            ['ТЦ "Времена года" - 860 м',           11, 55.670688,  37.281044   ],
+                                            ['ТЦ "Одинцовское подворье" - 1 км',    4,  55.672887,  37.280231   ]
                                         ];
 
                     function init () {
@@ -233,7 +233,7 @@
 
                         // Создание вложенного макета содержимого балуна.
                         var MyBalloonContentLayout = ymaps.templateLayoutFactory.createClass(
-                            '<div class="popover-content popover-content-0$[properties.balloonType]"><img src="$[properties.balloonImg]" alt="" />$[properties.balloonContent]</div>'
+                            '<div class="popover-content popover-content-$[properties.balloonType]"><img src="$[properties.balloonImg]" alt="" />$[properties.balloonContent]</div>'
                         );
 
                         var myGeocoder = ymaps.geocode('Московская область, г. Одинцово, ул. Маковского, д. 26');
@@ -259,7 +259,7 @@
                         for (var i = 0; i < objectsMap.length - 1; i++) {
 
                             var myPlacemark = new ymaps.Placemark([objectsMap[i][2], objectsMap[i][3]], {
-                                    balloonImg: 'images/infrastructure-map-0' + objectsMap[i][1] + '.png',
+                                    balloonImg: 'images/infrastructure-map-' + objectsMap[i][1] + '.png',
                                     balloonType: objectsMap[i][1],
                                     balloonContent: objectsMap[i][0]
                                 }, {
@@ -268,7 +268,7 @@
                                     balloonPanelMaxMapArea: 0,
                                     balloonShadow: false,
                                     iconLayout: 'default#image',
-                                    iconImageHref: 'images/infrastructure-map-0' + objectsMap[i][1] + '.png',
+                                    iconImageHref: 'images/infrastructure-map-' + objectsMap[i][1] + '.png',
                                     iconImageSize: [38, 38],
                                     iconImageOffset: [-19, -19],
                                     hideIconOnBalloonOpen: false
@@ -299,15 +299,17 @@
                     <div class="infrastructure-list-title">Инфраструктура района</div>
                     <div class="infrastructure-list-text">Наведите на точку на карте, чтобы узнать подробности</div>
                     <ul>
-                        <li><img src="images/infrastructure-map-01.png" alt="" width="38" height="38" /><span>Ж/д станция «Анапа»</span></li>
-                        <li><img src="images/infrastructure-map-02.png" alt="" width="38" height="38" /><span>Детский сад</span></li>
-                        <li><img src="images/infrastructure-map-03.png" alt="" width="38" height="38" /><span>Школа</span></li>
-                        <li><img src="images/infrastructure-map-04.png" alt="" width="38" height="38" /><span>Супермаркет</span></li>
-                        <li><img src="images/infrastructure-map-05.png" alt="" width="38" height="38" /><span>Больница</span></li>
-                        <li><img src="images/infrastructure-map-06.png" alt="" width="38" height="38" /><span>Банк</span></li>
-                        <li><img src="images/infrastructure-map-07.png" alt="" width="38" height="38" /><span>Почта</span></li>
-                        <li><img src="images/infrastructure-map-08.png" alt="" width="38" height="38" /><span>Аптека</span></li>
-                        <li><img src="images/infrastructure-map-09.png" alt="" width="38" height="38" /><span>Кафе</span></li>
+                        <li><img src="images/infrastructure-map-1.png" alt="" width="38" height="38" /><span>Ж/д станция «Анапа»</span></li>
+                        <li><img src="images/infrastructure-map-2.png" alt="" width="38" height="38" /><span>Детский сад</span></li>
+                        <li><img src="images/infrastructure-map-3.png" alt="" width="38" height="38" /><span>Школа</span></li>
+                        <li><img src="images/infrastructure-map-4.png" alt="" width="38" height="38" /><span>Супермаркет</span></li>
+                        <li><img src="images/infrastructure-map-5.png" alt="" width="38" height="38" /><span>Больница</span></li>
+                        <li><img src="images/infrastructure-map-6.png" alt="" width="38" height="38" /><span>Банк</span></li>
+                        <li><img src="images/infrastructure-map-7.png" alt="" width="38" height="38" /><span>Почта</span></li>
+                        <li><img src="images/infrastructure-map-8.png" alt="" width="38" height="38" /><span>Аптека</span></li>
+                        <li><img src="images/infrastructure-map-9.png" alt="" width="38" height="38" /><span>Кафе</span></li>
+                        <li><img src="images/infrastructure-map-10.png" alt="" width="38" height="38" /><span>Салон услуг</span></li>
+                        <li><img src="images/infrastructure-map-11.png" alt="" width="38" height="38" /><span>Спортивный клуб</span></li>
                     </ul>
                 </div>
                 <!-- infrastructure list END -->

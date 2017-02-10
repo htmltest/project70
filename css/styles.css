@@ -807,15 +807,17 @@ h1+.campaigns-list {padding:0}
 
 .popover {position:absolute; left:0; top:0; white-space:nowrap; cursor:pointer; background:transparent}
 .popover-content {background:#000; padding:0 23px 0 46px; height:38px; color:#fff; font-size:14px; line-height:38px; border-radius:19px}
-.popover-content-01 {background:#25aae2}
-.popover-content-02 {background:#f24a8d}
-.popover-content-03 {background:#00c188}
-.popover-content-04 {background:#f1bb2a}
-.popover-content-05 {background:#f00005}
-.popover-content-06 {background:#3ab54a}
-.popover-content-07 {background:#0054a6}
-.popover-content-08 {background:#108600}
-.popover-content-09 {background:#7c5112}
+.popover-content-1 {background:#25aae2}
+.popover-content-2 {background:#f24a8d}
+.popover-content-3 {background:#00c188}
+.popover-content-4 {background:#f1bb2a}
+.popover-content-5 {background:#f00005}
+.popover-content-6 {background:#3ab54a}
+.popover-content-7 {background:#0054a6}
+.popover-content-8 {background:#108600}
+.popover-content-9 {background:#7c5112}
+.popover-content-10 {background:#d2008a}
+.popover-content-11 {background:#2537e6}
 .popover-content img {position:absolute; left:0; top:0}
 
 .photo-gallery {position:relative; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; background:#fff}
