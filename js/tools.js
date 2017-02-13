@@ -476,6 +476,7 @@ var stopScrollGallery = false;
             }).done(function(html) {
                 $('.choose-window-container').find('.loading').remove();
                 $('.choose-window-container').html(html);
+                $('.choose-window-map').maphilight();
             });
 
             e.preventDefault();
@@ -493,21 +494,35 @@ var stopScrollGallery = false;
             e.preventDefault();
         });
 
-        $('body').on('mouseover', '.choose-window-flat-scheme map area', function(e) {
+        $('body').on('mouseover', '.choose-window-map-scheme+map area', function(e) {
             var curBlock = $(this).parents().filter('.choose-window-flat-scheme');
-            var curIndex = curBlock.find('map area').index($(this));
+            var curIndex = curBlock.find('.choose-window-map-scheme+map area').index($(this));
+            var curArea = curBlock.find('.choose-window-map+map area').eq(curIndex);
+            if (curArea.data('maphilighthover')) {
+                var curStyle = curArea.data('maphilight');
+                curArea.data('maphilight', curArea.data('maphilighthover'));
+                curArea.data('maphilighthover', curStyle);
+                curBlock.find('.choose-window-map').maphilight();
+            }
             curBlock.find('.flat-floor-scheme-hint-item').eq(curIndex).show().css({'left': e.pageX - $(window).scrollLeft(), 'top': e.pageY - $(window).scrollTop()});
         });
 
-        $('body').on('mouseout', '.choose-window-flat-scheme map area', function(e) {
-            $('.flat-floor-scheme-hint-item').hide();
+        $('body').on('mouseout', '.choose-window-map-scheme+map area', function(e) {
             var curBlock = $(this).parents().filter('.choose-window-flat-scheme');
-            var curIndex = curBlock.find('map area').index($(this));
+            var curIndex = curBlock.find('.choose-window-map-scheme+map area').index($(this));
+            var curArea = curBlock.find('.choose-window-map+map area').eq(curIndex);
+            if (curArea.data('maphilighthover')) {
+                var curStyle = curArea.data('maphilight');
+                curArea.data('maphilight', curArea.data('maphilighthover'));
+                curArea.data('maphilighthover', curStyle);
+                curBlock.find('.choose-window-map').maphilight();
+            }
+            $('.flat-floor-scheme-hint-item').hide();
         });
 
-        $('body').on('mousemove', '.choose-window-flat-scheme map area', function(e) {
+        $('body').on('mousemove', '.choose-window-map-scheme+map area', function(e) {
             var curBlock = $(this).parents().filter('.choose-window-flat-scheme');
-            var curIndex = curBlock.find('map area').index($(this));
+            var curIndex = curBlock.find('.choose-window-map-scheme+map area').index($(this));
             curBlock.find('.flat-floor-scheme-hint-item').eq(curIndex).show().css({'left': e.pageX - $(window).scrollLeft(), 'top': e.pageY - $(window).scrollTop()});
         });
 
