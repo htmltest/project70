@@ -569,22 +569,7 @@ var stopScrollGallery = false;
             e.preventDefault();
         });
 
-        $('map[name="flat-floor-scheme"] area').hover(
-            function(e) {
-                var curIndex = $('map[name="flat-floor-scheme"] area').index($(this));
-                $('.flat-floor-scheme-hint-item').eq(curIndex).show().css({'left': e.pageX - $(window).scrollLeft(), 'top': e.pageY - $(window).scrollTop()});
-            },
-
-            function(e) {
-                $('.flat-floor-scheme-hint-item').hide();
-                var curIndex = $('map[name="flat-floor-scheme"] area').index($(this));
-            }
-        );
-
-        $('map[name="flat-floor-scheme"] area').mousemove(function(e) {
-            var curIndex = $('map[name="flat-floor-scheme"] area').index($(this));
-            $('.flat-floor-scheme-hint-item').eq(curIndex).show().css({'left': e.pageX - $(window).scrollLeft(), 'top': e.pageY - $(window).scrollTop()});
-        });
+        $('.flat-floor-container .choose-window-map').maphilight();
 
         $('.photo-gallery-item').each(function() {
             var curSlider = $(this);
