@@ -350,10 +350,20 @@ footer {height:160px; position:relative; margin:-160px 0 0 0; background:#fff}
 .rules-list {margin:60px auto 0 auto; max-width:1180px}
 .rules-list:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .rules-item {float:left; width:16.6666%; text-align:center}
-.rules-item a {display:inline-block; vertical-align:top; text-decoration:none; color:#555}
+.rules-item a {display:inline-block; vertical-align:top; text-decoration:none; color:#555; position:relative}
+.rules-item a.active:after {content:""; display:block; width:0; height:0; position:absolute; left:50%; margin-left:-17px; bottom:-68px; border-bottom:17px solid #fff; border-left:17px solid transparent; border-right:17px solid transparent}
 .rules-icon {line-height:73px}
-.rules-icon img {vertical-align:bottom}
+.rules-icon span {display:inline-block; vertical-align:middle; position:relative}
+.rules-icon img {display:block}
+.rules-icon img+img {position:absolute; left:0; top:0; opacity:0}
+.rules-item a.active .rules-icon img,
+.rules-item a:hover .rules-icon img {opacity:0}
+.rules-item a.active .rules-icon img+img,
+.rules-item a:hover .rules-icon img+img {opacity:1}
 .rules-name {padding:19px 0 0 0}
+
+.rules-detail {display:none; background:#fff; text-align:left; max-width:980px; overflow:hidden; margin:67px auto -7px auto; padding:12px 100px 41px 100px}
+.rules-detail.active {display:block}
 
 .banners:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .banners a {float:left; color:#fff; height:460px; width:33.33%; position:relative; background:#797c84 no-repeat center; background-size:cover}

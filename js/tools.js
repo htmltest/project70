@@ -933,6 +933,22 @@ var stopScrollGallery = false;
             $('.infrastructure-map-section-list').hide();
         });
 
+        $('.rules-item a').click(function(e) {
+            var curBlock = $($(this).attr('href'));
+            if (curBlock.length > 0) {
+                if (curBlock.hasClass('active')) {
+                    curBlock.removeClass('active');
+                    $('.rules-item a').removeClass('active');
+                } else {
+                    $('.rules-detail.active').removeClass('active');
+                    curBlock.addClass('active');
+                    $('.rules-item a.active').removeClass('active');
+                    $(this).addClass('active');
+                }
+                e.preventDefault();
+            }
+        });
+
     });
 
     function windowOpen(contentWindow) {
