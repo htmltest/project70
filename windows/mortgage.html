@@ -27,7 +27,7 @@
             <div class="mortgage-param">
                 <div class="mortgage-param-label">Процентная ставка</div>
                 <div class="mortgage-param-field" id="rate">
-                    <div class="mortgage-param-input"><input type="text" name="rate" value="11.4" data-min="9" data-max="13" /><em>%</em></div>
+                    <div class="mortgage-param-input"><input type="text" name="rate" value="11.4" data-min="0" data-max="13" /><em>%</em></div>
                     <div class="mortgage-param-slider">
                         <div class="range"></div>
                     </div>
@@ -259,7 +259,11 @@
                     var period  = Number($('#period').find('.mortgage-param-input input').val());
 
                     var creditSumm          = price - Math.round(initial / 100 * price);
-                    var creditPayment       = Math.round(creditSumm * (rate / (1 - Math.pow((1 + rate), -period))));
+                    if (rate == 0) {
+                        var creditPayment   = Math.round(creditSumm / period);
+                    } else {
+                        var creditPayment   = Math.round(creditSumm * (rate / (1 - Math.pow((1 + rate), -period))));
+                    }
                     var creditIncome        = Math.round(creditPayment * 100 / 50);
                     var creditOverpayment   = creditPayment * period - creditSumm;
 
