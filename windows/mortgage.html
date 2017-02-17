@@ -241,13 +241,32 @@
                             }
                         }
 
-                        var Format = wNumb({
-                            decimals: 1,
-                            mark: ','
-                        });
+                        function num_ending2(number) {
+                            var endings = Array('месяцев', 'месяц', 'месяца');
+                            var num100 = number % 100;
+                            var num10 = number % 10;
+                            if (num100 >= 5 && num100 <= 20) {
+                                return endings[0];
+                            } else if (num10 == 0) {
+                                return endings[0];
+                            } else if (num10 == 1) {
+                                return endings[1];
+                            } else if (num10 >= 2 && num10 <= 4) {
+                                return endings[2];
+                            } else if (num10 >= 5 && num10 <= 9) {
+                                return endings[0];
+                            } else {
+                                return endings[2];
+                            }
+                        }
 
-                        var curYear = values[handle] / 12;
-                        $('.mortgage-period-summ').html(Format.to(curYear) + ' ' + num_ending(Math.floor(curYear)));
+                        var curYear = Math.floor(values[handle] / 12);
+                        var curMonth = values[handle] - curYear * 12;
+                        var monthText = '';
+                        if (curMonth != 0) {
+                            monthText = ' ' + curMonth + ' ' + num_ending2(curMonth);
+                        }
+                        $('.mortgage-period-summ').html(curYear + ' ' + num_ending(curYear) + monthText);
                         recalcMortgage();
                     });
                 });
