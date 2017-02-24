@@ -297,7 +297,7 @@ footer {height:160px; position:relative; margin:-160px 0 0 0; background:#fff}
 .window-order form {margin:39px 0 20px 0}
 .window-order .form-submit {width:auto}
 
-.infrastructure {text-align:center; padding:29px 0 71px 0; position:relative; overflow:hidden; background:#fff; margin:0 0 -60px 0}
+.infrastructure {text-align:center; padding:29px 0 71px 0; position:relative; width:100%; background:#fff; margin:0 0 -60px 0}
 .infrastructure .content {max-width:1180px}
 
 .infrastructure-photo {margin:42px 0 0 0; position:relative; width:100%; text-align:left}
@@ -306,12 +306,14 @@ footer {height:160px; position:relative; margin:-160px 0 0 0; background:#fff}
 
 .infrastructure-map-section-number {position:absolute; width:40px; height:40px; background:#ff6532; font:bold 20px/40px "Roboto Slab", serif; color:#fff; border-radius:40px; text-align:center}
 .infrastructure-map-section-number:after {content:""; display:block; width:3px; height:15px; background:#ff6532; position:absolute; left:50%; top:100%; margin:0 0 0 -1px}
+.infrastructure-map-section-number.hover {background:#499e3b; z-index:9}
+.infrastructure-map-section-number.hover:after {background:#499e3b}
 
 .infrastructure-map-section-list {position:absolute; display:none; left:0; top:0}
-.infrastructure-map-section-list-wrap {position:absolute; left:-150px; bottom:20px; white-space:nowrap; font-size:15px; background:#fff; padding:7px 30px 16px 30px; box-shadow:0 15px 30px rgba(12, 24, 10, .5)}
-.infrastructure-map-section-list-wrap:after {content:""; display:block; width:0; height:0; position:absolute; bottom:-12px; left:50%; margin-left:-13px; border-top:12px solid #fff; border-left:13px solid transparent; border-right:13px solid transparent}
-.infrastructure-map-section-list-title {font:bold 16px/20px "Roboto Slab", serif; color:#252525; padding:11px 0 17px 0; min-width:240px; text-align:center}
-.infrastructure-map-section-list-progress-bar {position:relative; height:30px; font-size:15px; line-height:30px; text-align:center; color:#fff; background:#317726; margin:0 0 29px 0}
+.infrastructure-map-section-list-wrap {position:absolute; z-index:99; left:-180px; bottom:20px; width:300px; padding:0 30px; white-space:nowrap; font-size:15px; background:#fff; box-shadow:0 15px 30px rgba(12, 24, 10, .5)}
+.infrastructure-map-section-list-wrap:after {content:""; display:block; width:0; height:0; position:absolute; bottom:-12px; left:50%; margin-left:-13px; border-top:12px solid #f7f7f7; border-left:13px solid transparent; border-right:13px solid transparent}
+.infrastructure-map-section-list-title {font:bold 16px/20px "Roboto Slab", serif; color:#252525; padding:27px 0 24px 0; text-align:center}
+.infrastructure-map-section-list-progress-bar {position:relative; height:17px; font-size:11px; line-height:17px; text-align:center; color:#fff; background:#317726; margin:19px 0 32px 0}
 .infrastructure-map-section-list-progress-bar.red {background:#c60c0c}
 .infrastructure-map-section-list-progress-bar-status {position:absolute; left:0; top:0; bottom:0; background:#54bc43}
 .infrastructure-map-section-list-progress-bar.red .infrastructure-map-section-list-progress-bar-status {background:#ff1212}
@@ -320,15 +322,27 @@ footer {height:160px; position:relative; margin:-160px 0 0 0; background:#fff}
 .infrastructure-map-section-list-progress-bar.red .infrastructure-map-section-list-progress-text {color:#fff}
 .infrastructure-map-section-list-progress-bar.red .infrastructure-map-section-list-progress-text.invert {color:#fff}
 .infrastructure-map-section-list-progress-values {display:none}
-.infrastructure-map-section-list-inner {display:table; font-size:13px; line-height:30px}
+.infrastructure-map-section-list-inner {display:table; font-size:13px; line-height:40px; width:100%}
 .infrastructure-map-section-list-row {display:table-row}
-.infrastructure-map-section-list-name {display:table-cell; padding:0 30px 0 0; border-top:1px solid #e6e6e6}
+.infrastructure-map-section-list-name {display:table-cell; width:110px}
 .infrastructure-map-section-list-name-1 {color:#629e2a}
 .infrastructure-map-section-list-name-2 {color:#006cb8}
 .infrastructure-map-section-list-name-3 {color:#f53d20}
-.infrastructure-map-section-list-row:first-child .infrastructure-map-section-list-name {border-top:none}
-.infrastructure-map-section-list-price {display:table-cell; color:#555; border-top:1px solid #e6e6e6}
-.infrastructure-map-section-list-row:first-child .infrastructure-map-section-list-price {border-top:none}
+.infrastructure-map-section-list-count {display:table-cell; width:50px; color:#b0b0b0}
+.infrastructure-map-section-list-count strong {color:#ff6532}
+.infrastructure-map-section-list-price {display:table-cell; color:#555; text-align:right}
+.infrastructure-map-section-list-status {background:#f7f7f7; padding:0 30px 21px 30px; margin:0 -30px}
+.infrastructure-map-section-list-status-title {font:bold 14px/20px "Roboto Slab", serif; color:#929292; padding:18px 0 20px 0; text-align:center}
+.infrastructure-map-section-list-status-bar {height:5px; background:#d2d2d2}
+.infrastructure-map-section-list-status-bar div {height:5px; background:#797979}
+.infrastructure-map-section-list-status-text {text-align:center; color:#b0b0b0; font-size:15px; padding:16px 0 0 0}
+
+.infrastructure-queue {position:absolute; width:440px; background:#fff; top:30px; right:40px; border-top:3px solid #ff6532; padding:0 10px 40px 10px}
+.infrastructure-queue-title {font:bold 20px/30px "Roboto Slab", serif; color:#252525; padding:22px 0 24px 0; text-align:center}
+.infrastructure-queue-list {display:table; width:100%}
+.infrastructure-queue-item {display:table-cell; vertical-align:top; padding:0 20px; width:33.33%; border-left:1px solid #e6e6e6; font-size:15px; line-height:25px; color:#555}
+.infrastructure-queue-item:first-child {border-left:0}
+.infrastructure-queue-item span {cursor:pointer; color:#ff6532; font-weight:bold; font-family:"Roboto Slab", serif; background:url(../images/infrastructure-queue.png) repeat-x left bottom}
 
 .infrastructure-map {position:absolute; left:0; top:0}
 

@@ -915,6 +915,34 @@ var stopScrollGallery = false;
             }
         });
 
+        $('body').on('mouseover', '.infrastructure-queue-item span', function() {
+            var builds = $(this).data('builds').split(',');
+            for (var i = 0; i < builds.length; i++) {
+                var curIndex = -1;
+                $('.infrastructure-map-section-number').each(function() {
+                    if ($(this).html() == builds[i]) {
+                        curIndex = $('.infrastructure-map-section-number').index($(this));
+                    }
+                });
+                if (curIndex > -1) {
+                    $('.infrastructure-map-section-number').eq(curIndex).addClass('hover');
+                    $('.infrastructure-container area').each(function() {
+                        var curArea = $(this);
+                        if (curArea.data('build') == builds[i]) {
+                            curArea.data('maphilight', {"stroke":false, "fillColor":"fff000", "fillOpacity":0.6, "alwaysOn":true});
+                        }
+                    });
+                }
+            }
+            $('.infrastructure-map').maphilight();
+        });
+
+        $('body').on('mouseout', '.infrastructure-queue-item span', function() {
+            $('.infrastructure-map-section-number').removeClass('hover');
+            $('.infrastructure-container area').data('maphilight', {"stroke":false, "fillColor":"fff000", "fillOpacity":0.6});
+            $('.infrastructure-map').maphilight();
+        });
+
         $('body').on('mouseover', '.choose-wrap area', function(e) {
             var curIndex = $('.choose-wrap area').index($(this));
             var curLeft = e.pageX - $(window).scrollLeft();
