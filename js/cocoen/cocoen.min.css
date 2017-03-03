@@ -1,6 +1,6 @@
 .cocoen{position:relative;line-height:0;margin:0;padding:235px 0 0 0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;background:#ff6533}
 .cocoen:before{content:"";display:block;width:100%;height:9999px;position:absolute;top:100%;left:0;background:#ff6533}
-.cocoen>img{width:100%;display:block;background:#fff}
+.cocoen>img{width:100%;display:block}
 .cocoen>div:first-child{position:absolute;top:0;left:0;height:9999px;width:50%;padding:235px 0 0 0;background:#fff;overflow:hidden}
 .cocoen__drag{position:absolute;top:0;bottom:0;left:50%;width:1px}
 .cocoen__drag:before{content:"";position:absolute;top:400px;right:0;height:73px;width:73px;background:url(drag.png);margin:36px -36px 0 0}
