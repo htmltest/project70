@@ -494,6 +494,12 @@ var stopScrollGallery = false;
             e.preventDefault();
         });
 
+        $('body').on('click', '.choose-window-map-scheme+map area', function(e) {
+            if ($(this).hasClass('disabled')) {
+                e.preventDefault();
+            }
+        });
+
         $('body').on('mouseover', '.choose-window-map-scheme+map area', function(e) {
             var curBlock = $(this).parents().filter('.choose-window-flat-scheme');
             var curIndex = curBlock.find('.choose-window-map-scheme+map area').index($(this));

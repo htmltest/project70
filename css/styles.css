@@ -660,6 +660,7 @@ footer {height:160px; position:relative; margin:-160px 0 0 0; background:#fff}
 .choose-window-flat {text-align:center; color:#252525; font-size:20px; line-height:25px; padding:12px 0 0 0}
 .choose-window-flat-scheme {position:relative; margin:40px 0 0 0; text-align:center}
 .choose-window-flat-scheme-inner {display:inline-block; position:relative; vertical-align:top}
+.choose-window-flat-scheme-inner area.disabled {cursor:default}
 .choose-window-map {display:block; position:relative}
 .choose-window-map-scheme-back {display:block; position:absolute; left:0; top:0; width:100%; height:100%}
 .flat-floor-scheme-floor-title {position:absolute; background:#fff; padding:3px 8px; text-align:center; font-size:15px; line-height:20px; letter-spacing:0; white-space:nowrap}
