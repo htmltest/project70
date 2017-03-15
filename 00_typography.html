@@ -553,8 +553,8 @@
                                 $('.map-ways-item-foot').removeClass('active');
                                 multiRoute = new ymaps.multiRouter.MultiRoute({
                                     referencePoints: [
-                                        'Москва, Кремлёвская набережная',
-                                        'Анапа, Анапское шоссе, 6'
+                                        'Анапа, Привокзальная улица, 1',
+                                        '44.898939, 37.348521'
                                     ],
                                     params: {
                                         results: 1
@@ -591,12 +591,11 @@
                                 $('.map-ways-item-auto').removeClass('active');
                                 multiRoute = new ymaps.multiRouter.MultiRoute({
                                     referencePoints: [
-                                        'Москва, Белорусский вокзал',
-                                        'Анапа, Анапское шоссе, 6'
+                                        'Крымская улица, 182, Россия, Краснодарский край, Анапа',
+                                        '44.898939, 37.348521'
                                     ],
                                     params: {
-                                        results: 1,
-                                        routingMode: 'masstransit'
+                                        results: 1
                                         }
                                     }, {
                                         wayPointVisible: false,

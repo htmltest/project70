@@ -641,20 +641,35 @@ footer {height:160px; position:relative; margin:-160px 0 0 0; background:#fff}
 .choose-window.open {display:block}
 .choose-window-container {position:relative; min-height:440px}
 
-.choose-window-inner {width:700px; margin:0 auto}
-.choose-window-inner:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.choose-window-inner {display:table; width:1006px; margin:0 auto; position:relative}
+.choose-window-inner:before {content:""; display:block; position:absolute; right:100%; top:0; margin-right:-250px; bottom:0; width:9999px; background:#f3f3f3}
 
-.choose-window-floors {float:left; width:178px; margin:0 0 0 -178px; text-align:center; padding:99px 0 66px 0}
-.choose-window-floors-title {font:bold 15px/20px "Roboto Slab", serif; color:#252525}
-.choose-window-floors-title:after {content:""; display:block; width:17px; height:10px; margin:15px auto 0 auto; background:url(../images/choose-window-floors-title.png)}
-.choose-window-floors ul {width:29px; margin:0 auto; padding:20px 0 0 0}
-.choose-window-floors li {width:29px; height:29px; margin:1px 0 0 0; padding:0}
+.choose-window-floors {display:table-cell; vertical-align:bottom; width:250px; text-align:center; padding:0 0 49px 0}
+.choose-window-floors-title {font:bold 15px/20px "Roboto Slab", serif; color:#a2a2a2; position:relative}
+.choose-window-floors-title:after {content:""; display:block; width:104px; height:5px; margin:31px 0 0 75px; background:#fff}
+.choose-window-floors ul {width:129px; margin:0 0 0 50px; padding:0; position:relative}
+.choose-window-floors li {margin:0; padding:0; position:relative}
 .choose-window-floors li:before {display:none}
-.choose-window-floors li a {display:block; width:29px; height:29px; line-height:29px; text-align:center; text-decoration:none; color:#555; background:url(../images/choose-window-floor.png)}
-.choose-window-floors li.active a {background-position:left -29px; color:#fff}
+.choose-window-floors li.active:after {content:""; display:block; position:absolute; left:0; right:0; top:-1px; height:1px; background:url(../images/choose-window-floor.png) left -1px}
+.choose-window-floors li.active:before {content:""; display:block; position:absolute; left:auto; right:-30px; top:-1px; width:30px; height:31px; background:url(../images/choose-window-floor-active.png); border-radius:0}
+.choose-window-floors li.active:first-child:after {display:none}
+.choose-window-floors li a {display:block; height:30px; text-decoration:none; color:#808080; background:#fff; position:relative; margin:0 0 0 25px}
+.choose-window-floors li a:hover {background:#f7f7f7}
+.choose-window-floors li.disabled a {color:#ccc}
+.choose-window-floors li a:before {content:""; display:block; position:absolute; left:-25px; right:0; bottom:0; height:1px; background:url(../images/choose-window-floor.png)}
+.choose-window-floors li.active a:before {background-position:left -1px}
+.choose-window-floors li a:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.choose-window-floor {float:left; width:35px; margin:0 2px 0 -35px; text-align:center; font:bold 15px/29px "Roboto Slab", serif; background:#f3f3f3; position:relative}
+.choose-window-floors li.active a .choose-window-floor {padding:1px 0; margin-top:-1px; color:#fff; background:#ff6532}
+.choose-window-floor-count {float:left; width:18px; height:18px; margin:4px 0 0 10px; border:1px solid #000; text-align:center; font-size:13px; line-height:18px}
+.choose-window-floor-count.disabled {opacity:.2}
+.choose-window-floor-count-1 {border-color:#499e3b; color:#499e3b}
+.choose-window-floor-count-2 {border-color:#006cb8; color:#006cb8}
+.choose-window-floor-count-3 {border-color:#f53d20; color:#f53d20}
+.choose-window-floors-bottom {width:143px; height:46px; background:url(../images/choose-window-floors-bottom.png); margin:0 0 0 56px; position:relative}
 
-.choose-window-tab {display:none; padding:0 0 55px 0}
-.choose-window-tab.active {display:block}
+.choose-window-tab {display:none; padding:0 0 55px 0; vertical-align:top}
+.choose-window-tab.active {display:table-cell}
 
 .choose-window-title {text-align:center; color:#252525; font:bold 25px/30px "Roboto Slab", serif; padding:53px 0 0 0}
 .choose-window-flat {text-align:center; color:#252525; font-size:20px; line-height:25px; padding:12px 0 0 0}
@@ -796,17 +811,31 @@ h1+.campaigns-list {padding:0}
 
 .flat-likes {text-align:center; padding:44px 0 0 0}
 
-.flat-schemes {background:#fafafa; position:relative; overflow:hidden}
+.flat-schemes {background:#fafafa; position:relative}
 .flat-schemes:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 
 .flat-floor {float:left; width:calc(100% - 640px)}
 .flat-floor h3 {margin:0; padding:38px 0 0 0; text-align:center}
 
 .flat-floor-container {text-align:center; line-height:0; padding:35px 0 0 0}
-.flat-floor-scheme-hint-item {position:fixed; left:0; top:0; margin:30px 0 0 -23px; z-index:10; display:none; white-space:nowrap; text-align:center; background:#fff; padding:9px 20px 12px 20px; color:#555; line-height:25px; box-shadow:0 0 7px rgba(18, 30, 53, .5); border-radius:3px}
-.flat-floor-scheme-hint-item:before {content:""; display:block; position:absolute; left:17px; top:-6px; width:0; height:0; border-bottom:6px solid #fff; border-left:6px solid transparent; border-right:6px solid transparent}
-.flat-floor-scheme-hint-item span {color:#629e2a}
-.flat-floor-scheme-hint-item strong {color:#499e3b; display:block; font:bold 15px/25px "Roboto Slab", serif; margin:-2px 0 0 0}
+.flat-floor-scheme-hint-item {position:fixed; left:0; top:0; margin:43px 0 0 -300px; text-align:left; z-index:10; display:none; white-space:nowrap; background:#fff; padding:0 30px; width:320px; box-shadow:0 1px 20px rgba(35, 58, 31, .5)}
+.flat-floor-scheme-hint-item:before {content:""; display:block; position:absolute; left:289px; top:-12px; width:0; height:0; border-bottom:12px solid #fff; border-left:12px solid transparent; border-right:12px solid transparent}
+
+.choose-window-flat-detail {white-space:normal; font-size:15px; line-height:20px; letter-spacing:0}
+.choose-window-flat-detail-title {font:bold 20px/25px "Roboto Slab", serif; color:#252525; padding:23px 0 0 0; margin:0 -30px 0 0}
+.choose-window-flat-detail-title span {color:#629e2a; font-weight:normal; font-family:Roboto, sans-serif}
+.choose-window-flat-detail dl {margin:24px -30px 0 -30px; padding:18px 30px 16px 30px; background:#f7f7f7}
+.choose-window-flat-detail dl:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.choose-window-flat-detail dt {float:left; clear:left; padding:0 0 5px 0; margin:0; color:#b0b0b0}
+.choose-window-flat-detail dd {float:right; padding:0 0 5px 0}
+.choose-window-flat-detail-price {color:#499e3b; font:bold 20px/25px "Roboto Slab", serif; padding:6px 0 0 0}
+.choose-window-flat-detail-links {padding:21px 0 0 0}
+.choose-window-flat-detail-links:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.choose-window-flat-detail-links .detail-link {float:left; width:121px; padding:0; text-align:center; text-transform:uppercase; font-size:11px}
+.choose-window-flat-detail-links .order-link {float:right; width:184px; border-color:#ff6532; padding:0; text-align:center; background:#ff6532; color:#fff; text-transform:uppercase; font-size:11px}
+.choose-window-flat-detail-links .order-link:hover {background:#df5022; border-color:#df5022}
+.choose-window-flat-detail-close {display:block; width:27px; height:27px; position:absolute; right:-13px; top:-14px; border-radius:27px; background:#ff6532 url(../images/choose-window-flat-detail-close.png) no-repeat center}
+.choose-window-flat-detail-close:hover {background-color:#df5022}
 
 .flat-floor-legend {padding:84px 0 10px 0; text-align:center; font-size:0; line-height:0; letter-spacing:-1px; color:#555; white-space:nowrap}
 .flat-floor-legend-item {display:inline-block; vertical-align:top; margin:0 20px}
