@@ -124,7 +124,7 @@ form {margin:20px 0; padding:0}
 .message-error-text span {font:bold 25px/25px "Roboto Slab", serif; color:#252525; display:block; padding:0 0 9px 0}
 .message-error-back-link {color:#ff6532; text-decoration:none; font:bold 20px/25px "Roboto Slab", serif}
 
-.wrapper {min-width:1200px; position:relative; min-height:100%}
+.wrapper {min-width:1200px; position:relative; min-height:100%; width:100%; overflow:hidden}
 .page-404-bg .wrapper {background:url(../images/page-404.jpg) no-repeat center; background-size:cover}
 .wrapper-inner {padding:0 0 160px 0}
 .wrapper-inner:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
