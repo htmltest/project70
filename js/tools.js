@@ -548,7 +548,10 @@ var stopScrollGallery = false;
             }
             var curLeft = e.pageX - $(window).scrollLeft();
             var curTop = e.pageY - $(window).scrollTop();
-            $('.infrastructure-map-section-list').eq(curIndex).show().css({'left': curLeft, 'top': curTop});
+            $('.infrastructure-map-section-list').eq(curIndex).removeClass('infrastructure-map-section-list-right').show().css({'left': curLeft, 'top': curTop});
+            if ($('.infrastructure-map-section-list-wrap').eq(curIndex).offset().left + $('.infrastructure-map-section-list-wrap').eq(curIndex).outerWidth() > $(window).width()) {
+                $('.infrastructure-map-section-list').eq(curIndex).addClass('infrastructure-map-section-list-right');
+            }
         });
 
         $('body').on('mousemove', '.choose-map-section-number strong', function(e) {
@@ -556,7 +559,10 @@ var stopScrollGallery = false;
             var curIndex = $('.choose-map-section-number strong').index(curLi);
             var curLeft = e.pageX - $(window).scrollLeft();
             var curTop = e.pageY - $(window).scrollTop();
-            $('.infrastructure-map-section-list').eq(curIndex).show().css({'left': curLeft, 'top': curTop});
+            $('.infrastructure-map-section-list').eq(curIndex).removeClass('infrastructure-map-section-list-right').show().css({'left': curLeft, 'top': curTop});
+            if ($('.infrastructure-map-section-list-wrap').eq(curIndex).offset().left + $('.infrastructure-map-section-list-wrap').eq(curIndex).outerWidth() > $(window).width()) {
+                $('.infrastructure-map-section-list').eq(curIndex).addClass('infrastructure-map-section-list-right');
+            }
         });
 
         $('body').on('mouseout', '.choose-map-section-number strong', function(e) {
@@ -953,14 +959,20 @@ var stopScrollGallery = false;
             var curIndex = $('.choose-wrap area').index($(this));
             var curLeft = e.pageX - $(window).scrollLeft();
             var curTop = e.pageY - $(window).scrollTop();
-            $('.infrastructure-map-section-list').eq(curIndex).show().css({'left': curLeft, 'top': curTop});
+            $('.infrastructure-map-section-list').eq(curIndex).removeClass('infrastructure-map-section-list-right').show().css({'left': curLeft, 'top': curTop});
+            if ($('.infrastructure-map-section-list-wrap').eq(curIndex).offset().left + $('.infrastructure-map-section-list-wrap').eq(curIndex).outerWidth() > $(window).width()) {
+                $('.infrastructure-map-section-list').eq(curIndex).addClass('infrastructure-map-section-list-right');
+            }
         });
 
         $('body').on('mousemove', '.choose-wrap area', function(e) {
             var curIndex = $('.choose-wrap area').index($(this));
             var curLeft = e.pageX - $(window).scrollLeft();
             var curTop = e.pageY - $(window).scrollTop();
-            $('.infrastructure-map-section-list').eq(curIndex).css({'left': curLeft, 'top': curTop});
+            $('.infrastructure-map-section-list').eq(curIndex).removeClass('infrastructure-map-section-list-right').css({'left': curLeft, 'top': curTop});
+            if ($('.infrastructure-map-section-list-wrap').eq(curIndex).offset().left + $('.infrastructure-map-section-list-wrap').eq(curIndex).outerWidth() > $(window).width()) {
+                $('.infrastructure-map-section-list').eq(curIndex).addClass('infrastructure-map-section-list-right');
+            }
         });
 
         $('body').on('mouseout', '.choose-wrap area', function(e) {
