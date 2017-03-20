@@ -302,6 +302,41 @@ var stopScrollGallery = false;
                 e.preventDefault();
             });
 
+            curBlock.find('.gallery-periods-inner .lvl-2 a').click(function(e) {
+                var curLI = $(this).parent();
+                curLI.toggleClass('open');
+                var isOpen = curLI.hasClass('open');
+                while (curLI.next().hasClass('lvl-3')) {
+                    curLI = curLI.next();
+                    if (isOpen) {
+                        curLI.addClass('open');
+                    } else {
+                        curLI.removeClass('open');
+                    }
+                }
+                if (curBlock.find('.gallery-periods-inner ul').width() > curBlock.find('.gallery-periods-inner').width()) {
+                    curBlock.find('.gallery-periods-next').css({'display': 'block'});
+                } else {
+                    curBlock.find('.gallery-periods-next').css({'display': 'none'});
+                }
+                var isFull = false;
+                while(!isFull && ($('.gallery-periods-inner ul li.active').offset().left + $('.gallery-periods-inner ul li.active').width() > curBlock.find('.gallery-periods-inner').width() + curBlock.find('.gallery-periods-inner').offset().left)) {
+                    var curLeft = Number(curBlock.find('.gallery-periods ul').css('left').replace(/px/, ''));
+                    curLeft -= curBlock.find('.gallery-periods-inner').width() / 2;
+
+                    curBlock.find('.gallery-periods-prev').css({'display': 'block'});
+                    if (curBlock.find('.gallery-periods-inner ul').width() + curLeft <= curBlock.find('.gallery-periods-inner').width()) {
+                        curLeft = curBlock.find('.gallery-periods-inner').width() - curBlock.find('.gallery-periods-inner ul').width() - 20;
+                        curBlock.find('.gallery-periods-next').css({'display': 'none'});
+                        isFull = true;
+                    }
+
+                    curBlock.find('.gallery-periods ul').css({'left': curLeft});
+
+                }
+                e.preventDefault();
+            });
+
         });
 
         $('.webcam-play').click(function(e) {

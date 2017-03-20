@@ -485,6 +485,8 @@ footer {height:160px; position:relative; margin:-160px 0 0 0; background:#fff}
 .gallery-periods-inner ul {margin:0; padding:0; list-style:none; display:inline-block; vertical-align:top; position:relative; left:0}
 .gallery-periods-inner li {margin:0; padding:0; display:inline-block; vertical-align:middle}
 .gallery-periods-inner li:before {display:none}
+.gallery-periods-inner li.lvl-3 {display:none}
+.gallery-periods-inner li.lvl-3.open {display:inline-block}
 .gallery-periods-inner span {display:block; font:bold 15px/31px "Roboto Slab", serif; letter-spacing:0; color:#252525; padding:0 15px}
 .gallery-periods-inner a {display:block; font-size:15px; line-height:31px; letter-spacing:0; padding:0 15px; text-decoration:none}
 .gallery-periods-inner li.active a {color:#fff; background:#ff6532; border-radius:3px}
