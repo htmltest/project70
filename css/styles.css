@@ -646,7 +646,7 @@ footer {height:160px; position:relative; margin:-160px 0 0 0; background:#fff}
 .choose-window-inner {display:table; width:1006px; margin:0 auto; position:relative}
 .choose-window-inner:before {content:""; display:block; position:absolute; right:100%; top:0; margin-right:-250px; bottom:0; width:9999px; background:#f3f3f3}
 
-.choose-window-floors {display:table-cell; vertical-align:bottom; width:250px; text-align:center; padding:0 0 49px 0}
+.choose-window-floors {display:table-cell; vertical-align:bottom; width:250px; text-align:center; padding:20px 0 38px 0}
 .choose-window-floors-title {font:bold 15px/20px "Roboto Slab", serif; color:#a2a2a2; position:relative}
 .choose-window-floors-title:after {content:""; display:block; width:104px; height:5px; margin:31px 0 0 75px; background:#fff}
 .choose-window-floors ul {width:129px; margin:0 0 0 50px; padding:0; position:relative}
@@ -669,6 +669,14 @@ footer {height:160px; position:relative; margin:-160px 0 0 0; background:#fff}
 .choose-window-floor-count-2 {border-color:#006cb8; color:#006cb8}
 .choose-window-floor-count-3 {border-color:#f53d20; color:#f53d20}
 .choose-window-floors-bottom {width:143px; height:46px; background:url(../images/choose-window-floors-bottom.png); margin:0 0 0 56px; position:relative}
+.choose-window-floors-rooms {font-size:11px; line-height:12px; color:#a2a2a2; text-align:center; padding:37px 0 0 30px; position:relative}
+.choose-window-floors-room {float:left; padding:0 0 0 20px}
+.choose-window-floors-room:first-child {padding:0}
+.choose-window-floors-room-icon {width:9px; height:9px; margin:0 auto; border-width:1px; border-style:solid}
+.choose-window-floors-room-icon-1 {border-color:#499e3b}
+.choose-window-floors-room-icon-2 {border-color:#006cb8}
+.choose-window-floors-room-icon-3 {border-color:#f53d20}
+.choose-window-floors-room-title {padding:6px 0 0 0}
 
 .choose-window-tab {display:none; padding:0 0 55px 0; vertical-align:top}
 .choose-window-tab.active {display:table-cell}
