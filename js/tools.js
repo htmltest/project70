@@ -174,6 +174,10 @@ var stopScrollGallery = false;
         }
 
         $('.gallery-periods').each(function() {
+            $('.gallery-periods-parents li.active').each(function() {
+                $(this).parents().filter('li').addClass('active');
+            });
+
             $('.gallery-periods-parents > ul > li.active > ul > li.active').each(function() {
                 var curLi = $(this);
                 if (curLi.find('ul').length > 0) {
@@ -187,14 +191,14 @@ var stopScrollGallery = false;
         $('.gallery-periods-parents > ul > li > a').click(function(e) {
             var curLi = $(this).parent();
             if (curLi.find('ul').length > 0) {
-                if (curLi.hasClass('open')) {
-                    curLi.removeClass('open');
+                if (curLi.hasClass('active')) {
+                    curLi.removeClass('active');
                     $('.gallery-periods-third').html('');
                     $('.gallery-periods-third-wrap').hide();
                     $('.gallery-periods-parents > ul > li > ul > li.active').removeClass('active');
                 } else {
-                    $('.gallery-periods-parents > ul > li.open').removeClass('open');
-                    curLi.addClass('open');
+                    $('.gallery-periods-parents > ul > li.active').removeClass('active');
+                    curLi.addClass('active');
                     $('.gallery-periods-third').html('');
                     $('.gallery-periods-third-wrap').hide();
                     $('.gallery-periods-parents > ul > li > ul > li.active').removeClass('active');
