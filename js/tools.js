@@ -502,7 +502,24 @@ var stopScrollGallery = false;
                     if (curIndex > $('.slider-preview ul li').length - 1) {
                         curIndex = 0;
                     }
-                    $('.slider-preview ul li').eq(curIndex).find('a').click();
+
+                    var curLi = $('.slider-preview ul li').eq(curIndex);
+
+                    var curVideo = $('.slider-content li').eq(curIndex).find('video');
+                    $('.slider-preview ul li.active').removeClass('active play');
+                    curLi.addClass('active play');
+
+                    if (Modernizr.video.h264) {
+                        $('.slider-content li.active video')[0].pause();
+                        $('.slider-content li.active video')[0].currentTime = 0;
+                    }
+                    $('.slider-content li.active').removeClass('active');
+                    $('.slider-content li').eq(curIndex).addClass('active');
+                    if (Modernizr.video.h264) {
+                        curVideo[0].muted = true;
+                        curVideo[0].currentTime = 0;
+                        curVideo[0].play();
+                    }
                 });
 
                 curVideo[0].addEventListener('canplay', function() {
